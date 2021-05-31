@@ -42,6 +42,9 @@ body {
 
 label {
   margin-bottom: $magic-number / 2;
+  display: inline-grid;
+  grid-gap: $magic-number;
+  grid-auto-flow: column;
 }
 
 input,
@@ -109,6 +112,9 @@ input[type='radio'] {
   display: inline-block;
   &:checked {
     background-color: $actions-primary-default;
+  }
+  + label {
+    display: inline;
   }
 }
 
