@@ -5,7 +5,7 @@
 Sensible webpack 5 boilerplate using Babel, PostCSS and Sass with a hot dev server and an optimized production build. Used for developing Hedgehog.
 
 ## Using the css via CDN
-For development, use https://gitcdn.link.
+For development, use https://gitcdn.link or https://raw.githack.com.
 
 ## Installation for local dev
 
