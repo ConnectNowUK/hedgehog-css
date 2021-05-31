@@ -1,3 +1,5 @@
+$magic-number: 8px;
+
 html {
   @extend .text-style-6;
   background-color: $background-off-white;
@@ -32,7 +34,7 @@ body {
 }
 
 label {
-  margin-bottom: 4px;
+  margin-bottom: $magic-number / 2;
 }
 
 input,
@@ -43,12 +45,13 @@ textarea {
   box-shadow: $input-shadow-offset-x + px $input-shadow-offset-y + px
     $input-shadow-radius $input-shadow-spread + px $input-shadow-color;
   border: 1px solid $borders-gray;
-  padding: 8px 16px;
-  border-radius: 8px;
+  padding: $magic-number - 1 $magic-number * 2; // -1, because we subtract border width
+  border-radius: $magic-number;
   width: 100%;
   box-sizing: border-box;
   height: auto;
   background-color: $background-white;
+  margin: 0;
 }
 
 input[type='color']::-webkit-color-swatch-wrapper {
@@ -58,39 +61,39 @@ input[type='color']::-webkit-color-swatch-wrapper {
 input[type='color']::-webkit-color-swatch {
   height: 22px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: $magic-number;
 }
 
 input[type='range']::-webkit-slider-runnable-track {
   background: $background-off-white;
   width: 100%;
-  height: 8px;
+  height: $magic-number;
   cursor: pointer;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  margin-top: 8px;
+  border-radius: $magic-number;
+  margin-bottom: $magic-number;
+  margin-top: $magic-number;
 }
 input[type='range']::-webkit-slider-thumb {
   margin-top: -12px;
-  width: 32px;
-  height: 32px;
+  width: $magic-number * 4;
+  height: $magic-number * 4;
   background: $background-white;
   border: 1px solid $borders-gray;
   cursor: pointer;
   -webkit-appearance: none;
-  border-radius: 8px;
+  border-radius: $magic-number;
 }
 
 input[type='checkbox'],
 input[type='radio'] {
-  width: 24px;
-  height: 24px;
+  width: $magic-number * 3;
+  height: $magic-number * 3;
   background: $background-white;
   border: 1px solid $borders-gray;
   cursor: pointer;
   -webkit-appearance: none;
   padding: 0;
-  border-radius: 8px;
+  border-radius: $magic-number;
   display: inline-block;
   &:checked {
     background-color: $actions-primary-default;
@@ -98,7 +101,7 @@ input[type='radio'] {
 }
 
 input[type='radio'] {
-  border-radius: 24px;
+  border-radius: $magic-number * 3;
 }
 
 section {
@@ -108,4 +111,25 @@ section {
 img {
   box-sizing: border-box;
   max-width: 100%;
+}
+
+.button {
+  padding: $magic-number $magic-number * 2;
+  border-radius: $magic-number;
+  border: none;
+  background-color: $actions-primary-default;
+  color: $text-white;
+  width: auto;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $actions-primary-hover;
+  }
+}
+
+button,
+input[type='submit'],
+input[type='button'],
+input[type='reset'] {
+  @extend .button;
 }

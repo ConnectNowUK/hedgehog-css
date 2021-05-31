@@ -186,7 +186,10 @@
   font-family: $links-style-2-font-family;
   font-weight: $links-style-2-font-weight;
   line-height: $links-style-2-line-height + px;
-  color: $text-info;
+  color: $actions-primary-default;
+  &:hover {
+    color: $actions-primary-hover;
+  }
 }
 
 .text-links-style-3 {
@@ -194,7 +197,10 @@
   font-family: $links-style-3-font-family;
   font-weight: $links-style-3-font-weight;
   line-height: $links-style-3-line-height + px;
-  color: $text-info;
+  color: $actions-primary-default;
+  &:hover {
+    color: $actions-primary-hover;
+  }
 }
 
 .text-links-style-4 {
@@ -202,7 +208,10 @@
   font-family: $links-style-4-font-family;
   font-weight: $links-style-4-font-weight;
   line-height: $links-style-4-line-height + px;
-  color: $text-info;
+  color: $actions-primary-default;
+  &:hover {
+    color: $actions-primary-hover;
+  }
 }
 
 .text-links-style-5 {
@@ -210,7 +219,10 @@
   font-family: $links-style-5-font-family;
   font-weight: $links-style-5-font-weight;
   line-height: $links-style-5-line-height + px;
-  color: $text-info;
+  color: $actions-primary-default;
+  &:hover {
+    color: $actions-primary-hover;
+  }
 }
 
 .text-links-style-6 {
@@ -218,7 +230,10 @@
   font-family: $links-style-6-font-family;
   font-weight: $links-style-6-font-weight;
   line-height: $links-style-6-line-height + px;
-  color: $text-info;
+  color: $actions-primary-default;
+  &:hover {
+    color: $actions-primary-hover;
+  }
 }
 
 .text-links-style-7 {
@@ -226,7 +241,10 @@
   font-family: $links-style-7-font-family;
   font-weight: $links-style-7-font-weight;
   line-height: $links-style-7-line-height + px;
-  color: $text-info;
+  color: $actions-primary-default;
+  &:hover {
+    color: $actions-primary-hover;
+  }
 }
 
 p,
@@ -251,10 +269,6 @@ small {
 
 .button {
   @extend .text-bold-style-7;
-}
-
-button {
-  @extend .button;
 }
 
 a {
