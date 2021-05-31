@@ -3,6 +3,9 @@ $magic-number: 8px;
 html {
   @extend .text-style-6;
   background-color: $background-off-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   @extend .container-padding;
 }
 
@@ -121,9 +124,28 @@ img {
   color: $text-white;
   width: auto;
   cursor: pointer;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: $magic-number;
+  align-items: center;
+
+  &:disabled,
+  &:hover:disabled {
+    background-color: $actions-primary-disabled;
+    color: $text-gray;
+    cursor: not-allowed;
+  }
 
   &:hover {
     background-color: $actions-primary-hover;
+  }
+
+  &:active {
+    background-color: $actions-primary-pressed;
+  }
+
+  &.button-large {
+    padding: $magic-number * 2 $magic-number * 3;
   }
 }
 
