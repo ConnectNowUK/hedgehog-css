@@ -278,8 +278,7 @@ textarea {
 
 b,
 em,
-strong,
-.button.button-large {
+strong {
   @extend .text-bold-style-6;
 }
 
@@ -295,6 +294,10 @@ a {
 .button,
 a.button {
   @extend .text-bold-style-7;
+  &.button-large {
+    @extend .text-bold-style-6;
+    color: $text-white;
+  }
 }
 
 @for $i from 1 through 6 {
