@@ -1,5 +1,9 @@
 $magic-number: 8px;
 
+* {
+  margin: 0;
+}
+
 html {
   @extend .text-style-6;
   background-color: $background-off-white;
@@ -57,6 +61,11 @@ textarea {
   margin: 0;
 }
 
+.input-help-text {
+  margin-top: $magic-number / 2;
+  display: block;
+}
+
 input[type='color']::-webkit-color-swatch-wrapper {
   padding: 0;
 }
@@ -108,7 +117,7 @@ input[type='radio'] {
 }
 
 section {
-  background-color: $background-white;
+  // background-color: $background-white;
 }
 
 img {
@@ -155,4 +164,21 @@ input[type='button'],
 input[type='reset'],
 a.button {
   @extend .button;
+}
+
+.text-muted {
+  color: $text-gray;
+}
+
+.grid {
+  display: grid;
+  grid-gap: $magic-number * 3;
+}
+
+fieldset,
+form,
+section,
+article,
+main {
+  @extend .grid;
 }

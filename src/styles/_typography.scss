@@ -283,7 +283,8 @@ strong,
   @extend .text-bold-style-6;
 }
 
-small {
+small,
+.input-help-text {
   @extend .text-style-7;
 }
 
