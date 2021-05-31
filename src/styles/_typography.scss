@@ -73,6 +73,7 @@
   font-size: $style-1-font-size + px;
   font-family: $style-1-font-family;
   font-weight: $style-1-font-weight;
+  text-decoration: $style-1-text-decoration;
   line-height: $style-1-line-height + px;
   color: $text-black;
 }
@@ -81,6 +82,7 @@
   font-size: $style-2-font-size + px;
   font-family: $style-2-font-family;
   font-weight: $style-2-font-weight;
+  text-decoration: $style-2-text-decoration;
   line-height: $style-2-line-height + px;
   color: $text-black;
 }
@@ -89,6 +91,7 @@
   font-size: $style-3-font-size + px;
   font-family: $style-3-font-family;
   font-weight: $style-3-font-weight;
+  text-decoration: $style-3-text-decoration;
   line-height: $style-3-line-height + px;
   color: $text-black;
 }
@@ -97,6 +100,7 @@
   font-size: $style-4-font-size + px;
   font-family: $style-4-font-family;
   font-weight: $style-4-font-weight;
+  text-decoration: $style-4-text-decoration;
   line-height: $style-4-line-height + px;
   color: $text-black;
 }
@@ -105,6 +109,7 @@
   font-size: $style-5-font-size + px;
   font-family: $style-5-font-family;
   font-weight: $style-5-font-weight;
+  text-decoration: $style-5-text-decoration;
   line-height: $style-5-line-height + px;
   color: $text-black;
 }
@@ -113,6 +118,7 @@
   font-size: $style-6-font-size + px;
   font-family: $style-6-font-family;
   font-weight: $style-6-font-weight;
+  text-decoration: $style-6-text-decoration;
   line-height: $style-6-line-height + px;
   color: $text-black;
 }
@@ -121,6 +127,7 @@
   font-size: $style-7-font-size + px;
   font-family: $style-7-font-family;
   font-weight: $style-7-font-weight;
+  text-decoration: $style-7-text-decoration;
   line-height: $style-7-line-height + px;
   color: $text-black;
 }
@@ -129,6 +136,7 @@
   font-size: $bold-style-1-font-size + px;
   font-family: $bold-style-1-font-family;
   font-weight: $bold-style-1-font-weight;
+  text-decoration: $bold-style-1-text-decoration;
   line-height: $bold-style-1-line-height + px;
   color: $text-black;
 }
@@ -137,6 +145,7 @@
   font-size: $bold-style-2-font-size + px;
   font-family: $bold-style-2-font-family;
   font-weight: $bold-style-2-font-weight;
+  text-decoration: $bold-style-2-text-decoration;
   line-height: $bold-style-2-line-height + px;
   color: $text-black;
 }
@@ -145,6 +154,7 @@
   font-size: $bold-style-3-font-size + px;
   font-family: $bold-style-3-font-family;
   font-weight: $bold-style-3-font-weight;
+  text-decoration: $bold-style-3-text-decoration;
   line-height: $bold-style-3-line-height + px;
   color: $text-black;
 }
@@ -153,6 +163,7 @@
   font-size: $bold-style-4-font-size + px;
   font-family: $bold-style-4-font-family;
   font-weight: $bold-style-4-font-weight;
+  text-decoration: $bold-style-4-text-decoration;
   line-height: $bold-style-4-line-height + px;
   color: $text-black;
 }
@@ -161,6 +172,7 @@
   font-size: $bold-style-5-font-size + px;
   font-family: $bold-style-5-font-family;
   font-weight: $bold-style-5-font-weight;
+  text-decoration: $bold-style-5-text-decoration;
   line-height: $bold-style-5-line-height + px;
   color: $text-black;
 }
@@ -169,6 +181,7 @@
   font-size: $bold-style-6-font-size + px;
   font-family: $bold-style-6-font-family;
   font-weight: $bold-style-6-font-weight;
+  text-decoration: $bold-style-6-text-decoration;
   line-height: $bold-style-6-line-height + px;
   color: $text-black;
 }
@@ -177,6 +190,7 @@
   font-size: $bold-style-7-font-size + px;
   font-family: $bold-style-7-font-family;
   font-weight: $bold-style-7-font-weight;
+  text-decoration: $bold-style-7-text-decoration;
   line-height: $bold-style-7-line-height + px;
   color: $text-black;
 }
@@ -185,6 +199,7 @@
   font-size: $links-style-2-font-size + px;
   font-family: $links-style-2-font-family;
   font-weight: $links-style-2-font-weight;
+  text-decoration: $links-style-2-text-decoration;
   line-height: $links-style-2-line-height + px;
   color: $actions-primary-default;
   &:hover {
@@ -196,6 +211,7 @@
   font-size: $links-style-3-font-size + px;
   font-family: $links-style-3-font-family;
   font-weight: $links-style-3-font-weight;
+  text-decoration: $links-style-3-text-decoration;
   line-height: $links-style-3-line-height + px;
   color: $actions-primary-default;
   &:hover {
@@ -207,6 +223,7 @@
   font-size: $links-style-4-font-size + px;
   font-family: $links-style-4-font-family;
   font-weight: $links-style-4-font-weight;
+  text-decoration: $links-style-4-text-decoration;
   line-height: $links-style-4-line-height + px;
   color: $actions-primary-default;
   &:hover {
@@ -218,6 +235,7 @@
   font-size: $links-style-5-font-size + px;
   font-family: $links-style-5-font-family;
   font-weight: $links-style-5-font-weight;
+  text-decoration: $links-style-5-text-decoration;
   line-height: $links-style-5-line-height + px;
   color: $actions-primary-default;
   &:hover {
@@ -229,6 +247,7 @@
   font-size: $links-style-6-font-size + px;
   font-family: $links-style-6-font-family;
   font-weight: $links-style-6-font-weight;
+  text-decoration: $links-style-6-text-decoration;
   line-height: $links-style-6-line-height + px;
   color: $actions-primary-default;
   &:hover {
@@ -240,6 +259,7 @@
   font-size: $links-style-7-font-size + px;
   font-family: $links-style-7-font-family;
   font-weight: $links-style-7-font-weight;
+  text-decoration: $links-style-7-text-decoration;
   line-height: $links-style-7-line-height + px;
   color: $actions-primary-default;
   &:hover {
@@ -267,12 +287,13 @@ small {
   @extend .text-style-7;
 }
 
-.button {
-  @extend .text-bold-style-7;
-}
-
 a {
   @extend .text-links-style-6;
+}
+
+.button,
+a.button {
+  @extend .text-bold-style-7;
 }
 
 @for $i from 1 through 6 {
