@@ -1,15 +1,25 @@
 html {
-  font-size: $font-size;
-  font-family: $font-family;
-  background: $background-color;
-  color: $font-color;
-  max-width: $page-width;
-  line-height: 1.4;
+  @extend .text-style-6;
+  background-color: $background-off-white;
+  @extend .container-padding;
 }
 
 body {
   margin: 0;
-  width: 100vw;
+}
+
+.container-padding {
+  padding-left: $mobile-grid-0-offset + px;
+  padding-right: $mobile-grid-0-offset + px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 550px) {
+  .container-padding {
+    padding-left: $desktop-grid-0-offset + px;
+    padding-right: $desktop-grid-0-offset + px;
+    box-sizing: border-box;
+  }
 }
 
 #root {
@@ -21,8 +31,81 @@ body {
   height: 100vh;
 }
 
-h1 {
-  margin: auto;
-  text-align: center;
-  max-width: 90vw;
+label {
+  margin-bottom: 4px;
+}
+
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  border: none;
+  box-shadow: $input-shadow-offset-x + px $input-shadow-offset-y + px
+    $input-shadow-radius $input-shadow-spread + px $input-shadow-color;
+  border: 1px solid $borders-gray;
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  background-color: $background-white;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+  height: 22px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  background: $background-off-white;
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+input[type='range']::-webkit-slider-thumb {
+  margin-top: -12px;
+  width: 32px;
+  height: 32px;
+  background: $background-white;
+  border: 1px solid $borders-gray;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 8px;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  width: 24px;
+  height: 24px;
+  background: $background-white;
+  border: 1px solid $borders-gray;
+  cursor: pointer;
+  -webkit-appearance: none;
+  padding: 0;
+  border-radius: 8px;
+  display: inline-block;
+  &:checked {
+    background-color: $actions-primary-default;
+  }
+}
+
+input[type='radio'] {
+  border-radius: 24px;
+}
+
+section {
+  background-color: $background-white;
+}
+
+img {
+  box-sizing: border-box;
+  max-width: 100%;
 }

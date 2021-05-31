@@ -1,10 +1,13 @@
-# 📦 webpack Boilerplate
+# 📦 Hedgehog CSS and SCSS (based on webpack)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Sensible webpack 5 boilerplate using Babel, PostCSS and Sass with a hot dev server and an optimized production build.
+Sensible webpack 5 boilerplate using Babel, PostCSS and Sass with a hot dev server and an optimized production build. Used for developing Hedgehog.
 
-## Installation
+## Using the css via CDN
+For development, use https://gitcdn.link.
+
+## Installation for local dev
 
 Clone this repo and npm install.
 
@@ -17,7 +20,7 @@ npm i
 ### Development server
 
 ```bash
-npm start
+npm watch
 ```
 
 You can view the development server at `localhost:8080`.
@@ -93,10 +96,10 @@ cd dist && http-server
 - [`prettier`](https://github.com/prettier/prettier) - Dependency for `prettier-webpack-plugin` plugin
 - [`prettier-webpack-plugin`](https://github.com/hawkins/prettier-webpack-plugin) - Prettier configuration for webpack
 
-## Author
+## Author of the Boilerplate
 
 - [Tania Rascia](https://www.taniarascia.com)
 
-## License
+## Original  License
 
 This project is open source and available under the [MIT License](LICENSE).

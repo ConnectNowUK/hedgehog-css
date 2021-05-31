@@ -1,0 +1,268 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2)
+    format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2)
+    format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_SuW-AJi8SJQtQ4Y.woff)
+    format('woff');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW-AJi8SJQt.woff)
+    format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+.text-style-1 {
+  font-size: $style-1-font-size + px;
+  font-family: $style-1-font-family;
+  font-weight: $style-1-font-weight;
+  line-height: $style-1-line-height + px;
+  color: $text-black;
+}
+
+.text-style-2 {
+  font-size: $style-2-font-size + px;
+  font-family: $style-2-font-family;
+  font-weight: $style-2-font-weight;
+  line-height: $style-2-line-height + px;
+  color: $text-black;
+}
+
+.text-style-3 {
+  font-size: $style-3-font-size + px;
+  font-family: $style-3-font-family;
+  font-weight: $style-3-font-weight;
+  line-height: $style-3-line-height + px;
+  color: $text-black;
+}
+
+.text-style-4 {
+  font-size: $style-4-font-size + px;
+  font-family: $style-4-font-family;
+  font-weight: $style-4-font-weight;
+  line-height: $style-4-line-height + px;
+  color: $text-black;
+}
+
+.text-style-5 {
+  font-size: $style-5-font-size + px;
+  font-family: $style-5-font-family;
+  font-weight: $style-5-font-weight;
+  line-height: $style-5-line-height + px;
+  color: $text-black;
+}
+
+.text-style-6 {
+  font-size: $style-6-font-size + px;
+  font-family: $style-6-font-family;
+  font-weight: $style-6-font-weight;
+  line-height: $style-6-line-height + px;
+  color: $text-black;
+}
+
+.text-style-7 {
+  font-size: $style-7-font-size + px;
+  font-family: $style-7-font-family;
+  font-weight: $style-7-font-weight;
+  line-height: $style-7-line-height + px;
+  color: $text-black;
+}
+
+.text-bold-style-1 {
+  font-size: $bold-style-1-font-size + px;
+  font-family: $bold-style-1-font-family;
+  font-weight: $bold-style-1-font-weight;
+  line-height: $bold-style-1-line-height + px;
+  color: $text-black;
+}
+
+.text-bold-style-2 {
+  font-size: $bold-style-2-font-size + px;
+  font-family: $bold-style-2-font-family;
+  font-weight: $bold-style-2-font-weight;
+  line-height: $bold-style-2-line-height + px;
+  color: $text-black;
+}
+
+.text-bold-style-3 {
+  font-size: $bold-style-3-font-size + px;
+  font-family: $bold-style-3-font-family;
+  font-weight: $bold-style-3-font-weight;
+  line-height: $bold-style-3-line-height + px;
+  color: $text-black;
+}
+
+.text-bold-style-4 {
+  font-size: $bold-style-4-font-size + px;
+  font-family: $bold-style-4-font-family;
+  font-weight: $bold-style-4-font-weight;
+  line-height: $bold-style-4-line-height + px;
+  color: $text-black;
+}
+
+.text-bold-style-5 {
+  font-size: $bold-style-5-font-size + px;
+  font-family: $bold-style-5-font-family;
+  font-weight: $bold-style-5-font-weight;
+  line-height: $bold-style-5-line-height + px;
+  color: $text-black;
+}
+
+.text-bold-style-6 {
+  font-size: $bold-style-6-font-size + px;
+  font-family: $bold-style-6-font-family;
+  font-weight: $bold-style-6-font-weight;
+  line-height: $bold-style-6-line-height + px;
+  color: $text-black;
+}
+
+.text-bold-style-7 {
+  font-size: $bold-style-7-font-size + px;
+  font-family: $bold-style-7-font-family;
+  font-weight: $bold-style-7-font-weight;
+  line-height: $bold-style-7-line-height + px;
+  color: $text-black;
+}
+
+.text-links-style-2 {
+  font-size: $links-style-2-font-size + px;
+  font-family: $links-style-2-font-family;
+  font-weight: $links-style-2-font-weight;
+  line-height: $links-style-2-line-height + px;
+  color: $text-info;
+}
+
+.text-links-style-3 {
+  font-size: $links-style-3-font-size + px;
+  font-family: $links-style-3-font-family;
+  font-weight: $links-style-3-font-weight;
+  line-height: $links-style-3-line-height + px;
+  color: $text-info;
+}
+
+.text-links-style-4 {
+  font-size: $links-style-4-font-size + px;
+  font-family: $links-style-4-font-family;
+  font-weight: $links-style-4-font-weight;
+  line-height: $links-style-4-line-height + px;
+  color: $text-info;
+}
+
+.text-links-style-5 {
+  font-size: $links-style-5-font-size + px;
+  font-family: $links-style-5-font-family;
+  font-weight: $links-style-5-font-weight;
+  line-height: $links-style-5-line-height + px;
+  color: $text-info;
+}
+
+.text-links-style-6 {
+  font-size: $links-style-6-font-size + px;
+  font-family: $links-style-6-font-family;
+  font-weight: $links-style-6-font-weight;
+  line-height: $links-style-6-line-height + px;
+  color: $text-info;
+}
+
+.text-links-style-7 {
+  font-size: $links-style-7-font-size + px;
+  font-family: $links-style-7-font-family;
+  font-weight: $links-style-7-font-weight;
+  line-height: $links-style-7-line-height + px;
+  color: $text-info;
+}
+
+p,
+label,
+input,
+select,
+textarea {
+  @extend .text-style-6;
+  display: block;
+}
+
+b,
+em,
+strong,
+.button-large {
+  @extend .text-bold-style-6;
+}
+
+small {
+  @extend .text-style-7;
+}
+
+.button {
+  @extend .text-bold-style-7;
+}
+
+button {
+  @extend .button;
+}
+
+a {
+  @extend .text-links-style-6;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    @extend .text-style-#{$i};
+  }
+}
