@@ -4,11 +4,11 @@
 .message {
   background-color: $background-white;
   box-shadow: $dropdown-shadow-0-offset-x + px $dropdown-shadow-0-offset-y + px
-    $dropdown-shadow-0-radius + px $dropdown-shadow-0-spread + px
-    $dropdown-shadow-0-color;
-  box-shadow: $dropdown-shadow-1-offset-x + px $dropdown-shadow-1-offset-y + px
-    $dropdown-shadow-1-radius + px $dropdown-shadow-1-spread + px
-    $dropdown-shadow-1-color;
+      $dropdown-shadow-0-radius + px $dropdown-shadow-0-spread + px
+      $dropdown-shadow-0-color,
+    $dropdown-shadow-1-offset-x + px $dropdown-shadow-1-offset-y + px
+      $dropdown-shadow-1-radius + px $dropdown-shadow-1-spread + px
+      $dropdown-shadow-1-color;
 }
 
 .navbar {
@@ -48,7 +48,7 @@
   display: grid;
   grid-auto-flow: column;
   align-content: center;
-  grid-gap: $magic-number;
+  grid-gap: $magic-number * 2;
   grid-template-columns: 1fr auto;
 }
 
@@ -63,8 +63,9 @@
   display: grid;
   width: auto;
 
-  /* DISABLE ON MOBILE */
-  max-width: 75%;
+  @media (min-width: $magic-number * 96) {
+    max-width: 75%;
+  }
 
   > .message-group {
     display: grid;
@@ -72,30 +73,25 @@
     align-items: end;
     grid-gap: $magic-number;
     grid-template-columns: auto auto;
+    .message {
+      padding-top: $magic-number;
+      padding-bottom: $magic-number;
+      padding-left: $magic-number * 2;
+      padding-right: $magic-number * 2;
+      border-radius: $magic-number;
+    }
   }
-
-  .message {
-    padding-top: $magic-number;
-    padding-bottom: $magic-number;
-    padding-left: $magic-number * 2;
-    padding-right: $magic-number * 2;
-    border-radius: $magic-number;
+  &.inbound {
+    float: left;
+    .message-info {
+      padding-left: $magic-number * 6;
+    }
   }
-}
-
-.message-container.inbound .message-info {
-  padding-left: $magic-number * 6;
-}
-
-.message-container.inbound {
-  float: left;
-}
-
-.message-container.outbound {
-  float: right;
-}
-
-.message-container.outbound .message {
-  background-color: $actions-primary-default;
-  color: $text-white;
+  &.outbound {
+    float: right;
+    .message {
+      background-color: $actions-primary-default;
+      color: $text-white;
+    }
+  }
 }
