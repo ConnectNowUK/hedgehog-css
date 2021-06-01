@@ -62,6 +62,9 @@ textarea {
   height: auto;
   background-color: $background-white;
   margin: 0;
+  &.input-large {
+    padding: $magic-number * 2 - 1 $magic-number * 2;
+  }
 }
 
 .input-help-text {
