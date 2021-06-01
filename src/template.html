@@ -627,8 +627,9 @@ P R E F O R M A T T E D T E X T
                 >
               </p>
               <p>
-                <label for="input__webaddress">Web Address</label>
+                <label for="input__webaddress">Web Address disabled</label>
                 <input
+                  disabled
                   id="input__webaddress"
                   type="url"
                   placeholder="https://yoursite.com"
@@ -640,7 +641,11 @@ P R E F O R M A T T E D T E X T
                   id="input__emailaddress"
                   type="email"
                   placeholder="name@email.com"
+                  class="input-error"
                 />
+                <small id="emailHelp" class="input-help-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
               </p>
               <p>
                 <label for="input__phone">Phone Number</label>
