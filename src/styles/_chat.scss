@@ -1,0 +1,101 @@
+.navbar,
+.sidebar,
+.input-bar,
+.message {
+  background-color: $background-white;
+  box-shadow: $dropdown-shadow-0-offset-x + px $dropdown-shadow-0-offset-y + px
+    $dropdown-shadow-0-radius + px $dropdown-shadow-0-spread + px
+    $dropdown-shadow-0-color;
+  box-shadow: $dropdown-shadow-1-offset-x + px $dropdown-shadow-1-offset-y + px
+    $dropdown-shadow-1-radius + px $dropdown-shadow-1-spread + px
+    $dropdown-shadow-1-color;
+}
+
+.navbar {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-auto-columns: auto 1fr;
+  grid-gap: $magic-number;
+  justify-items: end;
+}
+
+.sidebar {
+  height: 100vh;
+}
+
+.chat-app {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto $magic-number * 45;
+}
+
+.chat-window {
+  overflow-x: scroll;
+  overscroll-behavior: contain;
+}
+
+.chat-app > main {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: $magic-number * 10 auto $magic-number * 9;
+  grid-gap: 0;
+  height: -webkit-fill-available;
+}
+
+.input-bar {
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  grid-gap: $magic-number;
+  grid-template-columns: 1fr auto;
+}
+
+.sidebar.closed {
+  display: none;
+}
+
+.message-container {
+  clear: both;
+  margin-bottom: $magic-number;
+  margin-top: $magic-number;
+  display: grid;
+  width: auto;
+
+  /* DISABLE ON MOBILE */
+  max-width: 75%;
+
+  > .message-group {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: end;
+    grid-gap: $magic-number;
+    grid-template-columns: auto auto;
+  }
+
+  .message {
+    padding-top: $magic-number;
+    padding-bottom: $magic-number;
+    padding-left: $magic-number * 2;
+    padding-right: $magic-number * 2;
+    border-radius: $magic-number;
+  }
+}
+
+.message-container.inbound .message-info {
+  padding-left: $magic-number * 6;
+}
+
+.message-container.inbound {
+  float: left;
+}
+
+.message-container.outbound {
+  float: right;
+}
+
+.message-container.outbound .message {
+  background-color: $actions-primary-default;
+  color: $text-white;
+}

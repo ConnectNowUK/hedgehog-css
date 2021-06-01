@@ -298,6 +298,9 @@ a.button {
     @extend .text-bold-style-6;
     color: $text-white;
   }
+  &.list-button {
+    @extend .text-style-6;
+  }
 }
 
 @for $i from 1 through 6 {
