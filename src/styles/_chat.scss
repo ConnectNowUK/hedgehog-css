@@ -63,7 +63,7 @@
   display: grid;
   width: auto;
 
-  @media (min-width: $magic-number * 96) {
+  @media (min-width: $breakpoints-tablet + px) {
     max-width: 75%;
   }
 

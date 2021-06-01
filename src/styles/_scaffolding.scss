@@ -21,7 +21,7 @@ body {
   box-sizing: border-box;
 }
 
-@media (min-width: 550px) {
+@media (min-width: $breakpoints-tablet + px) {
   .container-padding {
     padding-left: $desktop-grid-0-offset + px;
     padding-right: $desktop-grid-0-offset + px;
