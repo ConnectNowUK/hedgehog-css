@@ -41,7 +41,8 @@
   grid-auto-flow: row;
   grid-template-rows: $magic-number * 10 auto $magic-number * 9;
   grid-gap: 0;
-  height: -webkit-fill-available;
+  height: 100vh;
+  max-height: -webkit-fill-available;
 }
 
 .input-bar {
@@ -62,6 +63,7 @@
   margin-top: $magic-number;
   display: grid;
   width: auto;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   @media (min-width: $breakpoints-tablet + px) {
     max-width: 75%;
