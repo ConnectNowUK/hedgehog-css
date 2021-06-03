@@ -81,6 +81,8 @@
       padding-left: $magic-number * 2;
       padding-right: $magic-number * 2;
       border-radius: $magic-number;
+      white-space: pre-line;
+      word-break: break-word;
     }
   }
   &.inbound {
@@ -94,6 +96,9 @@
     .message {
       background-color: $actions-primary-default;
       color: $text-white;
+      a {
+        color: $text-white;
+      }
     }
   }
 }
