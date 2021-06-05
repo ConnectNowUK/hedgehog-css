@@ -42,7 +42,9 @@ section {
 }
 
 img,
-svg {
+svg,
+video,
+audio {
   box-sizing: border-box;
   max-width: 100%;
   display: block;
