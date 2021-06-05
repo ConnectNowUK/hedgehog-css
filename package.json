@@ -46,9 +46,6 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
   },
-  "gitHooks": {
-    "pre-commit": "vue-cli-service test:unit"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:taniarascia/webpack-boilerplate"
