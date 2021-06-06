@@ -283,8 +283,16 @@ strong {
 }
 
 small,
-.input-help-text {
+.input-help-text,
+.text-small {
   @extend .text-style-7;
+  a {
+    @extend .text-links-style-7;
+  }
+}
+
+a.text-small {
+  @extend .text-links-style-7;
 }
 
 a {

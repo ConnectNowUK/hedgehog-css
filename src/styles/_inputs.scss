@@ -3,6 +3,7 @@ label {
   display: inline-grid;
   grid-gap: $magic-number;
   grid-auto-flow: column;
+  grid-auto-columns: auto 1fr;
 }
 
 input,

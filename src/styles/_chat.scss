@@ -99,7 +99,9 @@
     .message {
       background-color: $actions-primary-default;
       color: $text-white;
-      a {
+      a,
+      .text-bold-style-6,
+      .text-muted {
         color: $text-white;
       }
     }
