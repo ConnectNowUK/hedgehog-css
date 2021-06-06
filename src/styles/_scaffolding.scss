@@ -44,10 +44,17 @@ section {
 img,
 svg,
 video,
-audio {
+audio,
+object,
+iframe {
   box-sizing: border-box;
   max-width: 100%;
   display: block;
+  border-radius: $magic-number;
+}
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: $magic-number;
 }
 
 .text-muted {
