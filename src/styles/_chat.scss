@@ -118,9 +118,9 @@
   justify-content: center;
   align-items: center;
 
-  #dot1,
-  #dot2,
-  #dot3 {
+  .dot1,
+  .dot2,
+  .dot3 {
     width: $magic-number * 2;
     height: $magic-number * 2;
     background: $text-gray;
