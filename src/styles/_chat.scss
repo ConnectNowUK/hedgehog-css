@@ -121,24 +121,24 @@
   #dot1,
   #dot2,
   #dot3 {
-    width: 15px;
-    height: 15px;
-    background: #cacaca;
+    width: $magic-number * 2;
+    height: $magic-number * 2;
+    background: $text-gray;
     border-radius: 50%;
-    margin: 5px;
+    margin: $magic-number;
     transition: all 0.5s ease-in-out;
     animation: typing 1s infinite;
   }
 
-  #dot1 {
+  .dot1 {
     animation-delay: 1s;
   }
 
-  #dot2 {
+  .dot2 {
     animation-delay: 0.5s;
   }
 
-  #dot3 {
+  .dot3 {
     animation-delay: 0.8s;
   }
 }
@@ -150,7 +150,7 @@
   }
 
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-$magic-number);
     transition: all 0.5s ease-in-out;
   }
 
