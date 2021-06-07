@@ -117,15 +117,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: $magic-number + ($magic-number * 0.75);
+  padding-right: $magic-number + ($magic-number * 0.75);
 
   .dot1,
   .dot2,
   .dot3 {
-    width: $magic-number * 2;
-    height: $magic-number * 2;
+    width: $magic-number;
+    height: $magic-number;
     background: $text-gray;
     border-radius: 50%;
-    margin: $magic-number;
+    margin: $magic-number $magic-number / 2;
     transition: all 0.5s ease-in-out;
     animation: typing 1s infinite;
   }
