@@ -159,6 +159,9 @@ input[type='checkbox']:checked {
       @extend .text-muted;
       max-width: 96%;
     }
+    &.list-button-large {
+      padding: $magic-number;
+    }
     &::after {
       position: absolute;
       right: $magic-number * 3;
