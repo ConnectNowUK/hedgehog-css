@@ -28,6 +28,13 @@
 
 .sidebar {
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  @media (min-width: $breakpoints-tablet + px) {
+    position: relative;
+  }
 }
 
 .chat-app {
