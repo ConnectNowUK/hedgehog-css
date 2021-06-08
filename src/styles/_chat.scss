@@ -39,6 +39,7 @@
 .chat-window {
   overflow-y: auto;
   overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
 }
 
 .chat-app > main {
@@ -117,8 +118,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: $magic-number + ($magic-number * 0.75);
-  padding-right: $magic-number + ($magic-number * 0.75);
+  padding: $magic-number ($magic-number * 1.75);
 
   .dot1,
   .dot2,
@@ -127,7 +127,7 @@
     height: $magic-number;
     background: $text-gray;
     border-radius: 50%;
-    margin: $magic-number $magic-number / 2;
+    margin: $magic-number $magic-number * 0.25;
     transition: all 0.5s ease-in-out;
     animation: typing 1s infinite;
   }
