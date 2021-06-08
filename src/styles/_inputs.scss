@@ -160,7 +160,7 @@ input[type='checkbox']:checked {
       max-width: 96%;
     }
     &.list-button-large {
-      padding: $magic-number;
+      padding: $magic-number * 2;
     }
     &::after {
       position: absolute;
