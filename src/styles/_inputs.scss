@@ -109,6 +109,7 @@ input[type='checkbox']:checked {
 }
 
 .button {
+  box-sizing: border-box;
   padding: $magic-number $magic-number * 2;
   border-radius: $magic-number;
   border: none;
@@ -167,6 +168,11 @@ input[type='checkbox']:checked {
       right: $magic-number * 3;
       top: calc(50% - #{$magic-number});
       content: url("data:image/svg+xml,%3Csvg width='14' height='17' viewBox='0 0 14 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 8.53333L0 16.5333L7.0663e-07 0.533325L14 8.53333Z' fill='%236E6E6E'/%3E%3C/svg%3E");
+    }
+    &:hover {
+      &::after {
+        filter: contrast(10);
+      }
     }
   }
 }
