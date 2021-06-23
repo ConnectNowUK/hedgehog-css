@@ -88,6 +88,7 @@
     align-items: end;
     grid-gap: $magic-number;
     grid-template-columns: auto auto;
+    z-index: -1;
     .message {
       padding-top: $magic-number;
       padding-bottom: $magic-number;
