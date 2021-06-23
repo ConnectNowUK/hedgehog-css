@@ -19,7 +19,6 @@
   grid-auto-columns: auto 1fr;
   grid-gap: $magic-number;
   justify-items: end;
-  z-index: 1;
   .logo img {
     max-height: $magic-number * 7;
     margin-right: $magic-number;
@@ -65,7 +64,6 @@
   align-content: center;
   grid-gap: $magic-number * 2;
   grid-template-columns: 1fr auto;
-  z-index: 1;
 }
 
 .sidebar.closed {
