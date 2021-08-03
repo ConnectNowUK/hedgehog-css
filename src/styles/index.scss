@@ -1,5 +1,10 @@
 $magic-number: 8px;
-
+:root {
+  // We require this var as the code in the vue app needs to know the "magic number" for some calculations.
+  // This is an easy way of exposing it.
+  // Annoyingly we can't use the scss variable here as it doesn't compile and literally outputs "$magic-number" as the var.
+  --magic-number: 8;
+}
 @import 'variables';
 @import 'typography';
 @import 'scaffolding';

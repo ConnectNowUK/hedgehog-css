@@ -52,10 +52,9 @@
 .chat-app > main {
   display: grid;
   grid-auto-flow: row;
-  grid-template-rows: $magic-number * 9 auto $magic-number * 9;
+  grid-template-rows: $magic-number * 9 1fr auto;
   grid-gap: 0;
   height: 100vh;
-  max-height: -webkit-fill-available;
 }
 
 .input-bar {
@@ -64,6 +63,13 @@
   align-content: center;
   grid-gap: $magic-number * 2;
   grid-template-columns: 1fr auto;
+  justify-content: start;
+  padding-top: $magic-number * 2;
+  padding-bottom: $magic-number * 2;
+  label,
+  button {
+    align-self: start;
+  }
 }
 
 .sidebar.closed {
