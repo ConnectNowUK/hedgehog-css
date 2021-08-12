@@ -4,7 +4,7 @@
 
 html {
   @extend .text-style-6;
-  background-color: $background-off-white;
+  background-color: $color-background-off-white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -16,15 +16,15 @@ body {
 }
 
 .container-padding {
-  padding-left: $mobile-grid-0-offset + px;
-  padding-right: $mobile-grid-0-offset + px;
+  padding-left: $grid-mobile-grid-0-offset;
+  padding-right: $grid-mobile-grid-0-offset;
   box-sizing: border-box;
 }
 
-@media (min-width: $breakpoints-tablet + px) {
+@media (min-width: $breakpoints-tablet) {
   .container-padding {
-    padding-left: $desktop-grid-0-offset + px;
-    padding-right: $desktop-grid-0-offset + px;
+    padding-left: $grid-desktop-grid-0-offset;
+    padding-right: $grid-desktop-grid-0-offset;
     box-sizing: border-box;
   }
 }
@@ -39,7 +39,7 @@ body {
 }
 
 section {
-  // background-color: $background-white;
+  // background-color: $color-background-white;
 }
 
 img,
@@ -63,7 +63,7 @@ audio::-webkit-media-controls-enclosure {
 }
 
 .text-muted {
-  color: $text-gray;
+  color: $color-text-gray;
 }
 
 .grid {

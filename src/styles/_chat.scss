@@ -2,13 +2,13 @@
 .sidebar,
 .input-bar,
 .message {
-  background-color: $background-white;
-  box-shadow: $dropdown-shadow-0-offset-x + px $dropdown-shadow-0-offset-y + px
-      $dropdown-shadow-0-radius + px $dropdown-shadow-0-spread + px
-      $dropdown-shadow-0-color,
-    $dropdown-shadow-1-offset-x + px $dropdown-shadow-1-offset-y + px
-      $dropdown-shadow-1-radius + px $dropdown-shadow-1-spread + px
-      $dropdown-shadow-1-color;
+  background-color: $color-background-white;
+  box-shadow: $effect-dropdown-shadow-0-offset-x
+      $effect-dropdown-shadow-0-offset-y $effect-dropdown-shadow-0-radius
+      $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
+    $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
+      $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
+      $effect-dropdown-shadow-1-color;
 }
 
 .navbar {
@@ -33,7 +33,7 @@
   top: 0;
   left: 0;
   right: 0;
-  @media (min-width: $breakpoints-tablet + px) {
+  @media (min-width: $breakpoints-tablet) {
     position: relative;
   }
 }
@@ -78,7 +78,7 @@
   width: auto;
   transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-  @media (min-width: $breakpoints-tablet + px) {
+  @media (min-width: $breakpoints-tablet) {
     max-width: 75%;
   }
 
@@ -111,12 +111,12 @@
   &.outbound {
     float: right;
     .message {
-      background-color: $actions-primary-default;
-      color: $text-white;
+      background-color: $color-actions-primary-default;
+      color: $color-text-white;
       a,
       .text-bold-style-6,
       .text-muted {
-        color: $text-white;
+        color: $color-text-white;
       }
     }
   }
@@ -133,7 +133,7 @@
   .dot3 {
     width: $magic-number;
     height: $magic-number;
-    background: $text-gray;
+    background: $color-text-gray;
     border-radius: 50%;
     margin: $magic-number $magic-number * 0.25;
     transition: all 0.5s ease-in-out;

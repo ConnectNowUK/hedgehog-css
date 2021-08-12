@@ -12,15 +12,16 @@ select,
 textarea {
   -webkit-appearance: none;
   border: none;
-  box-shadow: $input-shadow-offset-x + px $input-shadow-offset-y + px
-    $input-shadow-radius + px $input-shadow-spread + px $input-shadow-color;
-  border: 1px solid $borders-gray;
+  box-shadow: $effect-input-shadow-offset-x $effect-input-shadow-offset-y
+    $effect-input-shadow-radius $effect-input-shadow-spread
+    $effect-input-shadow-color;
+  border: 1px solid $color-borders-gray;
   padding: $magic-number - 1 $magic-number * 2; // -1, because we subtract border width
   border-radius: $magic-number;
   width: 100%;
   box-sizing: border-box;
   height: auto;
-  background-color: $background-white;
+  background-color: $color-background-white;
   margin: 0;
   transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   &.input-large {
@@ -29,8 +30,8 @@ textarea {
 
   &:disabled,
   &:hover:disabled {
-    background-color: $actions-primary-disabled;
-    color: $text-gray;
+    background-color: $color-actions-primary-disabled;
+    color: $color-text-gray;
     cursor: not-allowed;
   }
   & + .input-help-text {
@@ -38,7 +39,7 @@ textarea {
     display: block;
   }
   &.input-error {
-    border-color: $borders-error;
+    border-color: $color-borders-error;
     & + .input-help-text {
       @extend .text-danger;
     }
@@ -56,7 +57,7 @@ input[type='color']::-webkit-color-swatch {
 }
 
 input[type='range']::-webkit-slider-runnable-track {
-  background: $background-off-white;
+  background: $color-background-off-white;
   width: 100%;
   height: $magic-number;
   cursor: pointer;
@@ -68,8 +69,8 @@ input[type='range']::-webkit-slider-thumb {
   margin-top: -12px;
   width: $magic-number * 4;
   height: $magic-number * 4;
-  background: $background-white;
-  border: 1px solid $borders-gray;
+  background: $color-background-white;
+  border: 1px solid $color-borders-gray;
   cursor: pointer;
   -webkit-appearance: none;
   border-radius: $magic-number;
@@ -79,16 +80,16 @@ input[type='checkbox'],
 input[type='radio'] {
   width: $magic-number * 3;
   height: $magic-number * 3;
-  background: $background-white;
-  border: 1px solid $borders-gray;
+  background: $color-background-white;
+  border: 1px solid $color-borders-gray;
   cursor: pointer;
   -webkit-appearance: none;
   padding: 0;
   border-radius: $magic-number;
   display: inline-block;
   &:checked {
-    background-color: $actions-primary-default;
-    border-color: $borders-focus;
+    background-color: $color-actions-primary-default;
+    border-color: $color-borders-focus;
   }
   & + label {
     display: inline;
@@ -113,8 +114,8 @@ input[type='checkbox']:checked {
   padding: $magic-number $magic-number * 2;
   border-radius: $magic-number;
   border: none;
-  background-color: $actions-primary-default;
-  color: $text-white;
+  background-color: $color-actions-primary-default;
+  color: $color-text-white;
   width: auto;
   cursor: pointer;
   display: inline-grid;
@@ -125,17 +126,17 @@ input[type='checkbox']:checked {
 
   &:disabled,
   &:hover:disabled {
-    background-color: $actions-primary-disabled;
-    color: $text-gray;
+    background-color: $color-actions-primary-disabled;
+    color: $color-text-gray;
     cursor: not-allowed;
   }
 
   &:hover {
-    background-color: $actions-primary-hover;
+    background-color: $color-actions-primary-hover;
   }
 
   &:active {
-    background-color: $actions-primary-pressed;
+    background-color: $color-actions-primary-pressed;
   }
 
   &.button-large {
@@ -148,14 +149,14 @@ input[type='checkbox']:checked {
     display: inline-block;
     text-align: left;
     border-radius: 0;
-    box-shadow: $dropdown-shadow-0-offset-x + px $dropdown-shadow-0-offset-y +
-        px $dropdown-shadow-0-radius + px $dropdown-shadow-0-spread + px
-        $dropdown-shadow-0-color,
-      $dropdown-shadow-1-offset-x + px $dropdown-shadow-1-offset-y + px
-        $dropdown-shadow-1-radius + px $dropdown-shadow-1-spread + px
-        $dropdown-shadow-1-color;
+    box-shadow: $effect-dropdown-shadow-0-offset-x
+        $effect-dropdown-shadow-0-offset-y + px $effect-dropdown-shadow-0-radius
+        $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
+      $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
+        $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
+        $effect-dropdown-shadow-1-color;
     position: relative;
-    background-color: $background-white;
+    background-color: $color-background-white;
     span {
       display: block;
       @extend .text-muted;
