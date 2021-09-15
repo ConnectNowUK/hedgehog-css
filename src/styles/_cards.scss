@@ -1,12 +1,15 @@
 .card {
-  padding: 16px;
-  background: #ffffff;
+  padding: $magic-number * 2;
+  background-color: $color-background-white;
   /* Dropdown Shadow */
-
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05),
-    0px 0px 1px rgba(66, 71, 76, 0.45);
-  border-radius: 8px;
+  box-shadow: $effect-dropdown-shadow-0-offset-x
+      $effect-dropdown-shadow-0-offset-y + px $effect-dropdown-shadow-0-radius
+      $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
+    $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
+      $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
+      $effect-dropdown-shadow-1-color;
+  border-radius: $magic-number;
   > .buttons {
-    grid-gap: 8px;
+    grid-gap: $magic-number;
   }
 }
