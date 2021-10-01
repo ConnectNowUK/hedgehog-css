@@ -84,3 +84,80 @@ article,
 main {
   @extend .grid;
 }
+
+.main-grid #sidebar,
+.main-grid > .sidebar {
+  grid-area: sidebar;
+  position: sticky;
+  min-height: auto;
+  padding-bottom: $magic-number * 3;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  z-index: 1;
+}
+
+.main-grid > nav {
+  grid-area: nav;
+  background-color: $color-background-white;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05),
+    0px 0px 1px rgba(66, 71, 76, 0.45);
+}
+.main-grid > main {
+  grid-area: main;
+  padding-top: $magic-number * 2;
+  padding-right: $magic-number * 2;
+  padding-bottom: $magic-number * 2;
+  padding-left: $magic-number * 2;
+  display: inline-grid;
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+.main-grid {
+  display: grid;
+  grid-template:
+    'nav nav' minmax($magic-number * 9, auto)
+    'sidebar sidebar' $magic-number * 9
+    'main main' minmax(100%, auto) / 1fr 1fr;
+  grid-gap: 0 $magic-number;
+}
+
+@media (min-width: $breakpoints-tablet) {
+  .main-grid #sidebar,
+  .main-grid > .sidebar {
+    grid-auto-flow: row;
+    overflow-x: unset;
+  }
+
+  .main-grid {
+    grid-gap: 0 $magic-number * 3;
+    grid-template:
+      'nav nav nav nav' minmax($magic-number * 9, auto) 'sidebar main main main' minmax(
+        calc(100vh - $magic-number * 9),
+        auto
+      )
+      / minmax(auto, 1fr) 1fr 1fr 1fr;
+  }
+
+  .main-grid.no-sidebar {
+    grid-template:
+      'nav nav nav nav' minmax($magic-number * 9, auto) '. main main .' minmax(100%, auto)
+      / minmax(auto, 1fr) 1fr 1fr 1fr;
+  }
+
+  .main-grid.inverted {
+    grid-template:
+      'nav nav nav nav' minmax($magic-number * 9, auto) 'main main main sidebar' minmax(
+        100%,
+        auto
+      )
+      / 1fr 1fr 1fr minmax(auto, 1fr);
+  }
+
+  .main-grid > main {
+    padding-top: $magic-number * 3;
+    padding-right: $magic-number * 6;
+    padding-bottom: $magic-number * 3;
+    padding-left: unset;
+  }
+}

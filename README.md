@@ -1,4 +1,4 @@
-# 📦 Hedgehog CSS and SCSS (based on webpack)
+# Hedgehog CSS and SCSS
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -9,7 +9,7 @@ For development, use https://gitcdn.link or https://raw.githack.com; `https://ra
 
 ## Install Hedgehog via NPM
 
-Run `npm i -D @connectnow/hedgehog`.
+Run `npm i -D @connectnow/hedgehog`. Note the `-D` flag, importing as a dev-dependency. You can import it as such to have your project compile, minify, and purge unused Hedgehog CSS. Alternatively, you can use the fully compiled CSS.
 
 In your project somewhere (typically in `main.js` or similar) you can call the source sass files or the css files, with `import "@connectnow/hedgehog/src/styles/index.scss";` or `import "@connectnow/hedgehog/dist/styles/main.css";` respectively.
 
