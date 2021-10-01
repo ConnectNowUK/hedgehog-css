@@ -19,19 +19,6 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Build
-        run: |
-          npm install
-          npm run build
-
-      # We now store the changes in the repository
-      - name: Persist changes in repository
-        uses: mikeal/publish-to-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # this parameter is optional and defaults to master but I am using main
-          BRANCH_NAME: 'master'
-
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
@@ -41,7 +28,7 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-      
+
       - name: Check version changes
         uses: EndBug/version-check@v1
         id: check
@@ -53,6 +40,15 @@ jobs:
       - name: NPM CI
         if: steps.check.outputs.changed == 'true'
         run: npm ci
+
+      # We now store the changes in the repository
+      - name: Persist changes in repository
+        if: steps.check.outputs.changed == 'true'
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # this parameter is optional and defaults to master but I am using main
+          BRANCH_NAME: 'master'
 
       - name: Publish to NPM
         if: steps.check.outputs.changed == 'true'
