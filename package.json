@@ -1,9 +1,9 @@
 {
-  "name": "webpack-boilerplate",
-  "version": "2.0.1",
-  "description": "Sensible webpack 5 boilerplate using Babel and PostCSS with a hot dev server and an optimized production build.",
+  "name": "hedgehog",
+  "version": "0.0.1",
+  "description": "Hedgehog is ConnectNows CSS and SCSS",
   "main": "index.js",
-  "author": "Tania Rascia",
+  "author": "ConnectNow",
   "license": "MIT",
   "scripts": {
     "watch": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
@@ -45,9 +45,5 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:taniarascia/webpack-boilerplate"
   }
 }
