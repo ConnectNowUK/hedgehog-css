@@ -1,5 +1,5 @@
 {
-  "name": "hedgehog",
+  "name": "@connectnow/hedgehog",
   "version": "0.0.1",
   "description": "Hedgehog is ConnectNows CSS and SCSS",
   "main": "index.js",
@@ -45,5 +45,13 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnectNowUK/hedgehog-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ConnectNowUK/hedgehog-css/issues"
+  },
+  "homepage": "https://github.com/ConnectNowUK/hedgehog-css#readme"
 }
