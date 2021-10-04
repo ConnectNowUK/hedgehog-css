@@ -165,7 +165,10 @@ input[type='checkbox']:checked {
     &.list-button-large {
       padding: $magic-number * 2;
     }
-    &::after {
+    &.no-action {
+      cursor: default;
+    }
+    &:not(.no-action)::after {
       position: absolute;
       right: $magic-number * 3;
       top: calc(50% - #{$magic-number});

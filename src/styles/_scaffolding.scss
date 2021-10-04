@@ -96,11 +96,11 @@ main {
     grid-area: nav;
     background-color: $color-background-white;
     box-shadow: $effect-dropdown-shadow-0-offset-x
-      $effect-dropdown-shadow-0-offset-y $effect-dropdown-shadow-0-radius
-      $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
-    $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
-      $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
-      $effect-dropdown-shadow-1-color;
+        $effect-dropdown-shadow-0-offset-y $effect-dropdown-shadow-0-radius
+        $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
+      $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
+        $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
+        $effect-dropdown-shadow-1-color;
   }
   #sidebar,
   > .sidebar {
