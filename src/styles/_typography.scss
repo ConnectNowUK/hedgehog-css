@@ -69,7 +69,7 @@
     U+FEFF, U+FFFD;
 }
 
-.text-style-1 {
+.text-style-1, %text-style-1 {
   font-size: $font-style-1-font-size;
   font-family: $font-style-1-font-family;
   font-weight: $font-style-1-font-weight;
@@ -78,7 +78,7 @@
   color: $color-text-black;
 }
 
-.text-style-2 {
+.text-style-2, %text-style-2 {
   font-size: $font-style-2-font-size;
   font-family: $font-style-2-font-family;
   font-weight: $font-style-2-font-weight;
@@ -87,7 +87,7 @@
   color: $color-text-black;
 }
 
-.text-style-3 {
+.text-style-3, %text-style-3 {
   font-size: $font-style-3-font-size;
   font-family: $font-style-3-font-family;
   font-weight: $font-style-3-font-weight;
@@ -96,7 +96,7 @@
   color: $color-text-black;
 }
 
-.text-style-4 {
+.text-style-4, %text-style-4 {
   font-size: $font-style-4-font-size;
   font-family: $font-style-4-font-family;
   font-weight: $font-style-4-font-weight;
@@ -105,7 +105,7 @@
   color: $color-text-black;
 }
 
-.text-style-5 {
+.text-style-5, %text-style-5 {
   font-size: $font-style-5-font-size;
   font-family: $font-style-5-font-family;
   font-weight: $font-style-5-font-weight;
@@ -114,7 +114,7 @@
   color: $color-text-black;
 }
 
-.text-style-6 {
+.text-style-6, %text-style-6 {
   font-size: $font-style-6-font-size;
   font-family: $font-style-6-font-family;
   font-weight: $font-style-6-font-weight;
@@ -123,7 +123,7 @@
   color: $color-text-black;
 }
 
-.text-style-7 {
+.text-style-7, %text-style-7 {
   font-size: $font-style-7-font-size;
   font-family: $font-style-7-font-family;
   font-weight: $font-style-7-font-weight;
@@ -132,7 +132,7 @@
   color: $color-text-black;
 }
 
-.text-bold-style-1 {
+.text-bold-style-1, %text-bold-style-1 {
   font-size: $font-bold-style-1-font-size;
   font-family: $font-bold-style-1-font-family;
   font-weight: $font-bold-style-1-font-weight;
@@ -141,7 +141,7 @@
   color: $color-text-black;
 }
 
-.text-bold-style-2 {
+.text-bold-style-2, %text-bold-style-2 {
   font-size: $font-bold-style-2-font-size;
   font-family: $font-bold-style-2-font-family;
   font-weight: $font-bold-style-2-font-weight;
@@ -150,7 +150,7 @@
   color: $color-text-black;
 }
 
-.text-bold-style-3 {
+.text-bold-style-3, %text-bold-style-3 {
   font-size: $font-bold-style-3-font-size;
   font-family: $font-bold-style-3-font-family;
   font-weight: $font-bold-style-3-font-weight;
@@ -159,7 +159,7 @@
   color: $color-text-black;
 }
 
-.text-bold-style-4 {
+.text-bold-style-4, %text-bold-style-4 {
   font-size: $font-bold-style-4-font-size;
   font-family: $font-bold-style-4-font-family;
   font-weight: $font-bold-style-4-font-weight;
@@ -168,7 +168,7 @@
   color: $color-text-black;
 }
 
-.text-bold-style-5 {
+.text-bold-style-5, %text-bold-style-5 {
   font-size: $font-bold-style-5-font-size;
   font-family: $font-bold-style-5-font-family;
   font-weight: $font-bold-style-5-font-weight;
@@ -177,7 +177,7 @@
   color: $color-text-black;
 }
 
-.text-bold-style-6 {
+.text-bold-style-6, %text-bold-style-6 {
   font-size: $font-bold-style-6-font-size;
   font-family: $font-bold-style-6-font-family;
   font-weight: $font-bold-style-6-font-weight;
@@ -186,7 +186,7 @@
   color: $color-text-black;
 }
 
-.text-bold-style-7 {
+.text-bold-style-7, %text-bold-style-7 {
   font-size: $font-bold-style-7-font-size;
   font-family: $font-bold-style-7-font-family;
   font-weight: $font-bold-style-7-font-weight;
@@ -195,7 +195,7 @@
   color: $color-text-black;
 }
 
-.text-links-style-2 {
+.text-links-style-2, %text-links-style-2 {
   font-size: $font-links-style-2-font-size;
   font-family: $font-links-style-2-font-family;
   font-weight: $font-links-style-2-font-weight;
@@ -207,7 +207,7 @@
   }
 }
 
-.text-links-style-3 {
+.text-links-style-3, %text-links-style-3 {
   font-size: $font-links-style-3-font-size;
   font-family: $font-links-style-3-font-family;
   font-weight: $font-links-style-3-font-weight;
@@ -219,7 +219,7 @@
   }
 }
 
-.text-links-style-4 {
+.text-links-style-4, %text-links-style-4 {
   font-size: $font-links-style-4-font-size;
   font-family: $font-links-style-4-font-family;
   font-weight: $font-links-style-4-font-weight;
@@ -231,7 +231,7 @@
   }
 }
 
-.text-links-style-5 {
+.text-links-style-5, %text-links-style-5 {
   font-size: $font-links-style-5-font-size;
   font-family: $font-links-style-5-font-family;
   font-weight: $font-links-style-5-font-weight;
@@ -243,7 +243,7 @@
   }
 }
 
-.text-links-style-6 {
+.text-links-style-6, %text-links-style-6 {
   font-size: $font-links-style-6-font-size;
   font-family: $font-links-style-6-font-family;
   font-weight: $font-links-style-6-font-weight;
@@ -255,7 +255,7 @@
   }
 }
 
-.text-links-style-7 {
+.text-links-style-7, %text-links-style-7 {
   font-size: $font-links-style-7-font-size;
   font-family: $font-links-style-7-font-family;
   font-weight: $font-links-style-7-font-weight;
@@ -272,60 +272,62 @@ label,
 input,
 select,
 textarea {
-  @extend .text-style-6;
+  @extend %text-style-6;
   display: block;
 }
 
 b,
 em,
 strong {
-  @extend .text-bold-style-6;
+  @extend %text-bold-style-6;
 }
 
 small,
 .input-help-text,
 .text-small {
-  @extend .text-style-7;
+  @extend %text-style-7;
   a {
-    @extend .text-links-style-7;
+    @extend %text-links-style-7;
   }
 }
 
 a.text-small {
-  @extend .text-links-style-7;
+  @extend %text-links-style-7;
 }
 
 a {
-  @extend .text-links-style-6;
+  @extend %text-links-style-6;
 }
 
 .button,
-a.button {
-  @extend .text-bold-style-7;
+a.button,
+%button {
+  @extend %text-bold-style-7;
   &.button-large {
-    @extend .text-bold-style-6;
+    @extend %text-bold-style-6;
     color: $color-text-white;
   }
   &.list-button {
-    @extend .text-style-6;
+    @extend %text-style-6;
   }
 }
 
 .text-danger,
 button.text-danger,
-a.text-danger {
+a.text-danger,
+%text-danger {
   color: $color-text-danger;
 }
 
 .text-error {
-  @extend .text-danger;
+  @extend %text-danger;
   &:before {
     content: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.18633 0.413957C8.89432 -0.137986 7.98623 -0.137986 7.69422 0.413957L0.0986873 14.7611C0.0303136 14.8897 -0.00358318 15.0338 0.000299762 15.1794C0.0041827 15.325 0.0457129 15.4671 0.120844 15.5918C0.195975 15.7166 0.302144 15.8198 0.429007 15.8913C0.555869 15.9628 0.699098 16.0003 0.844738 16H16.0358C16.1814 16.0003 16.3245 15.9629 16.4513 15.8914C16.578 15.8199 16.6841 15.7168 16.7592 15.5921C16.8342 15.4674 16.8757 15.3254 16.8795 15.1799C16.8834 15.0344 16.8494 14.8904 16.781 14.7619L9.18633 0.413957ZM9.28422 13.4682H7.59633V11.7803H9.28422V13.4682ZM7.59633 10.0924V5.87262H9.28422L9.28507 10.0924H7.59633Z' fill='%23EA0B0C'/%3E%3C/svg%3E%0A");
     margin-right: $magic-number / 2;
   }
 }
 
-.ellipsis {
+.ellipsis, %ellipsis {
   text-overflow: ellipsis;
   /* white-space: nowrap; */
   overflow: hidden;
@@ -333,6 +335,6 @@ a.text-danger {
 
 @for $i from 1 through 6 {
   h#{$i} {
-    @extend .text-style-#{$i};
+    @extend %text-style-#{$i};
   }
 }

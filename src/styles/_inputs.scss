@@ -41,7 +41,7 @@ textarea {
   &.input-error {
     border-color: $color-borders-error;
     & + .input-help-text {
-      @extend .text-danger;
+      @extend %text-danger;
     }
   }
 }
@@ -109,7 +109,7 @@ input[type='checkbox']:checked {
   padding: $magic-number / 2;
 }
 
-.button {
+.button, %button {
   box-sizing: border-box;
   padding: $magic-number $magic-number * 2;
   border-radius: $magic-number;
@@ -144,7 +144,7 @@ input[type='checkbox']:checked {
   }
 
   &.list-button {
-    @extend .ellipsis;
+    @extend %ellipsis;
     width: 100%;
     display: block;
     text-align: left;
@@ -159,7 +159,7 @@ input[type='checkbox']:checked {
     background-color: $color-background-white;
     span {
       display: block;
-      @extend .text-muted;
+      @extend %text-muted;
       max-width: 96%;
     }
     &.list-button-large {
@@ -187,5 +187,5 @@ input[type='submit'],
 input[type='button'],
 input[type='reset'],
 a.button {
-  @extend .button;
+  @extend %button;
 }

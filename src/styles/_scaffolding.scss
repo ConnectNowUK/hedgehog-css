@@ -3,7 +3,7 @@
 }
 
 html {
-  @extend .text-style-6;
+  @extend %text-style-6;
   background-color: $color-background-off-white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -62,11 +62,11 @@ audio::-webkit-media-controls-enclosure {
   border-radius: $magic-number;
 }
 
-.text-muted {
+.text-muted, %text-muted {
   color: $color-text-gray;
 }
 
-.grid {
+.grid, %grid {
   display: grid;
   grid-gap: $magic-number * 3;
 }
@@ -82,7 +82,7 @@ form,
 section,
 article,
 main {
-  @extend .grid;
+  @extend %grid;
 }
 
 .main-grid {
