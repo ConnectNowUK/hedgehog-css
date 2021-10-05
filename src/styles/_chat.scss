@@ -91,7 +91,7 @@
   margin-top: $magic-number;
   display: grid;
   width: auto;
-  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: $transition-cubic-bezier;
 
   @media (min-width: $breakpoints-tablet) {
     max-width: 75%;

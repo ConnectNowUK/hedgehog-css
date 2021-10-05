@@ -13,6 +13,12 @@
       $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
       $effect-dropdown-shadow-1-color;
   border-radius: $magic-number;
+  @media (min-width: $breakpoints-tablet) {
+    min-width: $magic-number * 70;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
   * {
     @extend %ellipsis;
     word-break: break-word;
@@ -33,9 +39,14 @@
       margin-right: -#{$magic-number * 2};
       grid-auto-flow: row;
       gap: 0;
+      margin-bottom: -#{$magic-number * 2};
       > button,
       .button {
         @include list-button;
+      }
+      :last-child {
+        border-bottom-right-radius: $magic-number;
+        border-bottom-left-radius: $magic-number;
       }
     }
     @media (min-width: $breakpoints-tablet) {

@@ -874,6 +874,9 @@ P R E F O R M A T T E D T E X T
                 <button type="button" data-is-loading="true">
                   &lt;button loading&gt;
                 </button>
+                <button type="button" class="danger">
+                  &lt;button .danger&gt;
+                </button>
                 <button type="button" class="button-large">
                   &lt;button large&gt;
                 </button>
@@ -886,6 +889,9 @@ P R E F O R M A T T E D T E X T
                 </button>
                 <button type="button" class="list-button">
                   &lt;list button&gt;
+                </button>
+                <button type="button" class="list-button danger">
+                  &lt;list button .danger&gt;
                 </button>
                 <button type="button" class="list-button">
                   &lt;list button with span &gt;
@@ -981,6 +987,9 @@ P R E F O R M A T T E D T E X T
           </div>
         </section>
         <section id="card">
+          <header>
+            <h2>Cards</h2>
+          </header>
           <div class="card">
             <img src="https://placekitten.com/300/300" />
             <div>
@@ -988,8 +997,8 @@ P R E F O R M A T T E D T E X T
               <p class="text-muted">Hello</p>
             </div>
             <div class="buttons">
-              <button>Test</button>
-              <button>Test 2</button>
+              <button>Pet the cat</button>
+              <button class="danger">Forget to pet the cat</button>
             </div>
           </div>
 
@@ -1006,6 +1015,9 @@ P R E F O R M A T T E D T E X T
           </div>
         </section>
         <section id="nav">
+          <header>
+            <h2>Nav</h2>
+          </header>
           <nav>
             <div class="logo-name-wrapper" data-v-33fe1c3c="">
               <div class="logo" data-v-33fe1c3c="">
@@ -1069,10 +1081,33 @@ P R E F O R M A T T E D T E X T
             </div>
             <div class="navbar-links grid grid-column-flow">
               <a href="#" class="text-muted">Manager dashboard</a>
-              <a href="#" class="grid grid-column-flow gap-8 text-bold-style-6"
-                >• Queries</a
+              <a
+                href="#"
+                class="grid grid-column-flow gap-8 text-bold-style-6 dropdown-trigger"
+                >• Queries
+                <div
+                  class="dropdown grid"
+                  data-x-position="right"
+                  data-y-position="bottom"
+                >
+                  <div class="text-bold-style-6">3 ongoing queries</div>
+                  <div class="card">
+                    <div>
+                      <b>Desktop Support</b>
+                      <p class="text-muted">On chat.connectnow.org.uk</p>
+                    </div>
+                    <div class="buttons">
+                      <button class="danger">Mark as done</button>
+                      <button>Transfer</button>
+                      <button>Reopen link</button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="grid grid-column-flow gap-8 text-positive dropdown-trigger"
               >
-              <a href="#" class="grid grid-column-flow gap-8 text-positive">
                 <svg
                   width="22"
                   height="16"
@@ -1087,8 +1122,38 @@ P R E F O R M A T T E D T E X T
                     fill="#1B8811"
                   />
                 </svg>
-                Online</a
-              >
+                Online
+                <div
+                  class="dropdown grid"
+                  data-x-position="right"
+                  data-y-position="bottom"
+                >
+                  <div class="grid gap-8">
+                    <label>Status</label>
+                    <label for="card-radio1"
+                      ><input
+                        id="card-radio1"
+                        name="card-radio"
+                        type="radio"
+                        checked="checked"
+                      />
+                      Online and available to provide support</label
+                    >
+                    <label for="card-radio2"
+                      ><input id="card-radio2" name="card-radio" type="radio" />
+                      Offline</label
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    id="status-input__text"
+                    placeholder="Custom status text"
+                  />
+                  <p class="text-muted text-style-7">
+                    You last updated your status 24 min ago
+                  </p>
+                </div>
+              </a>
               <a
                 href="javascript:void(0)"
                 class="grid grid-column-flow gap-8 text-style-6 dropdown-trigger"

@@ -1,0 +1,168 @@
+@mixin button {
+  box-sizing: border-box;
+  padding: $magic-number + ($magic-number / 2) $magic-number * 2;
+  border-radius: $magic-number;
+  border: none;
+  background-color: $color-actions-primary-default;
+  color: $color-text-white;
+  width: auto;
+  cursor: pointer;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: $magic-number;
+  align-items: center;
+  transition: $transition-cubic-bezier;
+  &[data-is-loading='true'] {
+    padding: $magic-number $magic-number * 2;
+    content: $icon-loader;
+  }
+  &:disabled,
+  &:hover:disabled,
+  &[data-is-loading='true'],
+  &[data-is-loading='true']:hover {
+    background-color: $color-actions-primary-disabled;
+    color: $color-text-gray;
+    cursor: not-allowed;
+    &:hover {
+      @extend %animation-shake;
+    }
+  }
+
+  &:hover {
+    background-color: $color-actions-primary-hover;
+    filter: grayscale(10%);
+    > svg,
+    img {
+      @extend %animation-wiggle;
+    }
+  }
+
+  &:active {
+    background-color: $color-actions-primary-pressed;
+  }
+
+  &.button-large {
+    padding: $magic-number * 2 $magic-number * 3;
+  }
+
+  &.danger {
+    background-color: $color-text-danger;
+    color: $color-text-white;
+  }
+}
+
+.button,
+%button,
+button,
+input[type='submit'],
+input[type='button'],
+input[type='reset'],
+a.button {
+  @include button();
+}
+
+@mixin list-item {
+  @include ellipsis;
+  @include text-style(6);
+  min-height: $magic-number * 5;
+  padding: $magic-number * 2;
+  width: 100%;
+  display: block;
+  text-align: left;
+  border-radius: 0;
+  box-shadow: $effect-dropdown-shadow-0-offset-x
+      $effect-dropdown-shadow-0-offset-y + px $effect-dropdown-shadow-0-radius
+      $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
+    $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
+      $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
+      $effect-dropdown-shadow-1-color;
+  position: relative;
+  background-color: $color-background-white;
+  color: $color-text-black;
+
+  span {
+    display: block;
+    @include text-muted();
+  }
+
+  &.list-item-large {
+    padding-left: $magic-number * 2;
+    padding-right: $magic-number * 2;
+    padding-top: $magic-number;
+    padding-bottom: $magic-number;
+    min-height: $magic-number * 8;
+  }
+
+  &.danger {
+    background-color: $color-background-white;
+    color: $color-text-danger;
+  }
+}
+
+.list-item,
+%list-item {
+  @include list-item();
+}
+
+@mixin list-button {
+  @include list-item;
+
+  transition: $transition-cubic-bezier;
+
+  &.list-button-large {
+    padding-left: $magic-number * 2;
+    padding-right: $magic-number * 2;
+    padding-top: $magic-number;
+    padding-bottom: $magic-number;
+    min-height: $magic-number * 8;
+  }
+
+  &.no-action {
+    cursor: default;
+  }
+
+  &:not(.no-action) {
+    padding-right: $magic-number * 4;
+    &::after {
+      position: absolute;
+      right: $magic-number * 2;
+      top: calc(50% - #{$magic-number});
+      content: $icon-right-arrow;
+    }
+  }
+
+  &[data-is-loading='true'] {
+    content: $icon-loader;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-background-white;
+    color: $color-text-black;
+    &::after {
+      filter: contrast(10);
+    }
+  }
+
+  &:disabled,
+  &:hover:disabled,
+  &[data-is-loading='true'],
+  &[data-is-loading='true']:hover {
+    background-color: $color-actions-primary-disabled;
+    color: $color-text-gray;
+    cursor: not-allowed;
+  }
+}
+
+a.list-button,
+button.list-button,
+.list-button,
+%list-button {
+  @include list-button();
+}
+
+/* List buttons in boxes need a border radius on the bottom. Didn't want to apply to all. */
+.box .button.list-button:last-child {
+  border-bottom-left-radius: $magic-number;
+  border-bottom-right-radius: $magic-number;
+}
