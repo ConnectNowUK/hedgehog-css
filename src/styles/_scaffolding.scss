@@ -15,14 +15,16 @@ body {
   overflow-x: hidden;
 }
 
-.container-padding {
+.container-padding,
+%container-padding {
   padding-left: $grid-mobile-grid-0-offset;
   padding-right: $grid-mobile-grid-0-offset;
   box-sizing: border-box;
 }
 
 @media (min-width: $breakpoints-tablet) {
-  .container-padding {
+  .container-padding,
+  %container-padding {
     padding-left: $grid-desktop-grid-0-offset;
     padding-right: $grid-desktop-grid-0-offset;
     box-sizing: border-box;
@@ -68,7 +70,8 @@ audio::-webkit-media-controls-enclosure {
   grid-gap: $magic-number * 3;
 }
 
-.grid-column-flow {
+.grid-column-flow,
+%grid-column-flow {
   grid-auto-flow: column;
   align-items: center;
   justify-content: space-between;
@@ -82,6 +85,28 @@ main {
   @extend %grid;
 }
 
+nav {
+  // grid-area: nav;
+  background-color: $color-background-white;
+  box-shadow: $effect-dropdown-shadow-0-offset-x
+      $effect-dropdown-shadow-0-offset-y $effect-dropdown-shadow-0-radius
+      $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
+    $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
+      $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
+      $effect-dropdown-shadow-1-color;
+  @extend %grid;
+  @extend %grid-column-flow;
+  @extend %container-padding;
+  padding-top: $magic-number;
+  padding-bottom: $magic-number;
+}
+
+.logo-name-wrapper {
+  @extend %grid;
+  @extend %grid-column-flow;
+  gap: $magic-number;
+}
+
 .main-grid {
   display: grid;
   grid-template:
@@ -89,16 +114,6 @@ main {
     'sidebar sidebar' $magic-number * 9
     'main main' minmax(100%, auto) / 1fr 1fr;
   grid-gap: 0 $magic-number;
-  > nav {
-    grid-area: nav;
-    background-color: $color-background-white;
-    box-shadow: $effect-dropdown-shadow-0-offset-x
-        $effect-dropdown-shadow-0-offset-y $effect-dropdown-shadow-0-radius
-        $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
-      $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
-        $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
-        $effect-dropdown-shadow-1-color;
-  }
   #sidebar,
   > .sidebar {
     grid-area: sidebar;

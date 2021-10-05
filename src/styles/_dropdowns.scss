@@ -1,0 +1,117 @@
+// Root dropdown - affects all instances
+.dropdown {
+  box-sizing: border-box;
+  display: none;
+  grid-auto-flow: row;
+  border-radius: $magic-number;
+  background: $color-background-white;
+  box-shadow: $effect-dropdown-shadow-0-offset-x
+      $effect-dropdown-shadow-0-offset-y + px $effect-dropdown-shadow-0-radius
+      $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
+    $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
+      $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
+      $effect-dropdown-shadow-1-color;
+  min-width: 250px;
+  padding: $magic-number * 3;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 2;
+  &.buttons {
+    padding: 0;
+    .list-button:first-child {
+      border-top-left-radius: $magic-number;
+      border-top-right-radius: $magic-number;
+    }
+    .list-button:last-child {
+      border-bottom-left-radius: $magic-number;
+      border-bottom-right-radius: $magic-number;
+    }
+  }
+}
+@media (min-width: $breakpoints-tablet) {
+  .dropdown {
+    min-width: $magic-number * 50;
+  }
+}
+.dropdown-trigger {
+  overflow: visible;
+  position: relative;
+  &:hover .dropdown,
+  &:focus-within .dropdown,
+  .dropdown:hover {
+    display: grid;
+  }
+}
+
+// Main Nav
+//   .nav-wrapper {
+//     display: grid;
+//   }
+//   #nav {
+//     // Stretch all child components so that we can position dropdowns accurately. We want the content to be the same height as the wrapper
+//     align-items: stretch;
+//     .dropdown-trigger {
+//       display: grid;
+//       align-self: stretch;
+//       align-content: center;
+//     }
+
+//     // Immediate child anchors should not be underlined
+//     > a,
+//     > a:hover,
+//     > div > a,
+//     > div > a:hover {
+//       text-decoration: none;
+//     }
+
+//     // Anchor colours
+//     a:not(.button) {
+//       color: #232323;
+//       &.router-link-exact-active {
+//         color: $color-actions-primary-default;
+//       }
+//     }
+
+//     .logo,
+//     .user-link {
+//       grid-gap: $magic-number;
+//       // min-width: 120px;
+//       img {
+//         min-width: $magic-number * 3;
+//         min-height: $magic-number * 3;
+//       }
+//     }
+
+//     // Dock all dropdown instances to the bottom of the navbar, position left/right accordingly
+//     .dropdown {
+//       position: absolute;
+//       // Offset by nav height
+//       top: ($magic-number * 8);
+//       max-height: calc(100vh - #{$magic-number * 20});
+//       overflow-y: auto;
+//       &.buttons {
+//         .list-button:first-child {
+//           border-top-left-radius: 0;
+//           border-top-right-radius: 0;
+//         }
+//       }
+
+//       &.queries-dropdown {
+//         left: $magic-number * 2;
+//         width: calc(100vw - #{$magic-number * 4});
+//         @media (min-width: $breakpoints-desktop) {
+//           left: auto;
+//           right: $magic-number * 17;
+//           max-width: $magic-number * 100;
+//           width: calc(100vw - #{$magic-number * 34});
+//         }
+//       }
+
+//       &.user-dropdown {
+//         right: 0;
+//       }
+//     }
+//   }

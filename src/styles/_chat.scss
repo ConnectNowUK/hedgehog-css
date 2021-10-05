@@ -11,25 +11,28 @@
       $effect-dropdown-shadow-1-color;
 }
 
-.navbar {
-  width: 100%;
-  display: grid;
-  align-items: center;
-  grid-auto-flow: column;
-  grid-auto-columns: auto 1fr;
-  grid-gap: $magic-number;
-  justify-items: end;
-  .logo img {
-    max-height: $magic-number * 7;
-    margin-right: $magic-number;
-    object-fit: scale-down;
-    border-radius: 0;
-    min-width: $magic-number * 4;
-  }
-  a.sidebar-toggle {
-    min-width: $magic-number * 3;
-  }
-}
+// .navbar {
+//   width: 100%;
+//   display: grid;
+//   align-items: center;
+//   grid-auto-flow: column;
+//   grid-auto-columns: auto 1fr;
+//   grid-gap: $magic-number;
+//   justify-items: end;
+//   min-height: $magic-number * 9;
+//   .logo-name-wrapper {
+//     grid-gap: $magic-number;
+//   }
+//   .logo img {
+//     max-height: $magic-number * 7;
+//     object-fit: scale-down;
+//     border-radius: 0;
+//     min-width: $magic-number * 4;
+//   }
+//   a.sidebar-toggle {
+//     min-width: $magic-number * 3;
+//   }
+// }
 
 .sidebar {
   height: 100%;

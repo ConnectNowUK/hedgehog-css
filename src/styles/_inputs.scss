@@ -57,7 +57,7 @@ textarea {
 input[list],
 select:not([multiple]) {
   position: relative;
-  background-image: url("data:image/svg+xml,%3Csvg width='11' height='16' viewBox='0 0 11 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.33333 16L0 10.6667H10.6667L5.33333 16ZM5.33333 0L10.6667 5.33333H0L5.33333 0Z' fill='%236E6E6E'/%3E%3C/svg%3E");
+  background-image: $icon-select;
   background-repeat: no-repeat;
   padding-right: $magic-number * 4;
   background-position: right ($magic-number * 2) top 50%;
@@ -145,7 +145,7 @@ input[type='checkbox']:checked {
   transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   &[data-is-loading='true'] {
     padding: $magic-number $magic-number * 2;
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24px' height='24px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' style='margin: auto; background-image: none; display: block; shape-rendering: auto;'%3E%3Ccircle cx='50' cy='50' fill='none' stroke='%236e6e6e' stroke-width='10' r='35' stroke-dasharray='164.93361431346415 56.97787143782138'%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1s' values='0 50 50;360 50 50' keyTimes='0;1'%3E%3C/animateTransform%3E%3C/circle%3E%3C/svg%3E");
+    content: $icon-loader;
   }
   &:disabled,
   &:hover:disabled,
@@ -182,6 +182,7 @@ a.button {
 @mixin list-item {
   @include ellipsis;
   @include text-style(6);
+  min-height: 40px;
   padding: $magic-number * 2;
   width: 100%;
   display: block;
@@ -208,6 +209,7 @@ a.button {
     padding-right: $magic-number * 2;
     padding-top: $magic-number;
     padding-bottom: $magic-number;
+    min-height: $magic-number * 8;
   }
 }
 
@@ -224,6 +226,7 @@ a.button {
     padding-right: $magic-number * 2;
     padding-top: $magic-number;
     padding-bottom: $magic-number;
+    min-height: $magic-number * 8;
   }
 
   &.no-action {
@@ -236,12 +239,12 @@ a.button {
       position: absolute;
       right: $magic-number * 2;
       top: calc(50% - #{$magic-number});
-      content: url("data:image/svg+xml,%3Csvg width='14' height='17' viewBox='0 0 14 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 8.53333L0 16.5333L7.0663e-07 0.533325L14 8.53333Z' fill='%236E6E6E'/%3E%3C/svg%3E");
+      content: $icon-right-arrow;
     }
   }
 
   &[data-is-loading='true'] {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24px' height='24px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' style='margin: auto; background-image: none; display: block; shape-rendering: auto;'%3E%3Ccircle cx='50' cy='50' fill='none' stroke='%236e6e6e' stroke-width='10' r='35' stroke-dasharray='164.93361431346415 56.97787143782138'%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1s' values='0 50 50;360 50 50' keyTimes='0;1'%3E%3C/animateTransform%3E%3C/circle%3E%3C/svg%3E");
+    content: $icon-loader;
   }
 
   &:hover,
