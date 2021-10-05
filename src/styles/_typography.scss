@@ -343,6 +343,7 @@ a {
 }
 
 @mixin text-muted {
+  color: $color-text-gray;
 }
 
 .text-muted,

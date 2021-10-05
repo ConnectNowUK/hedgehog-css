@@ -198,7 +198,7 @@ a.button {
 
   span {
     display: block;
-    @include text-muted;
+    @include text-muted();
     max-width: 96%;
   }
 
