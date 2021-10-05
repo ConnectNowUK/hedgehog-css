@@ -109,7 +109,11 @@ main {
     overflow-x: scroll;
     z-index: 1;
   }
-
+  &.no-sidebar {
+    grid-template:
+      'nav nav' minmax($magic-number * 9, auto)
+      'main main' minmax(100%, auto) / 1fr 1fr;
+  }
   > main {
     grid-area: main;
     padding-top: $magic-number * 2;
@@ -137,8 +141,11 @@ main {
     &.no-sidebar {
       grid-template:
         'nav nav nav nav' minmax($magic-number * 9, auto)
-        '. main main .' minmax(100%, auto)
+        'main main main main' minmax(100%, auto)
         / minmax(auto, 1fr) 1fr 1fr 1fr;
+      > main {
+        padding-left: $magic-number * 6;
+      }
     }
     &.inverted {
       grid-template:
