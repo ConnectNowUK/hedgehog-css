@@ -98,7 +98,6 @@ input[type='range'] {
 input[type='range'],
 input[type='checkbox'],
 input[type='radio'] {
-  width: $magic-number * 3;
   height: $magic-number * 3;
   background: $color-background-white;
   border: 1px solid $color-borders-gray;
@@ -115,6 +114,11 @@ input[type='radio'] {
     display: inline;
     cursor: pointer;
   }
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  width: $magic-number * 3;
 }
 
 input[type='radio'] {

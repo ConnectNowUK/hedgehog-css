@@ -287,21 +287,18 @@ strong {
   @extend %text-bold-style-6;
 }
 
+a {
+  @extend %text-links-style-6;
+}
+
 small,
 .input-help-text,
 .text-small {
   @extend %text-style-7;
+  &a,
   a {
     @extend %text-links-style-7;
   }
-}
-
-a.text-small {
-  @extend %text-links-style-7;
-}
-
-a {
-  @extend %text-links-style-6;
 }
 
 @mixin ellipsis {
@@ -309,6 +306,7 @@ a {
   /* white-space: nowrap; */
   overflow: hidden;
 }
+
 .ellipsis,
 %ellipsis {
   @include ellipsis();
