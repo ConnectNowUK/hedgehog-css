@@ -1,6 +1,5 @@
 // Root dropdown - affects all instances
 .dropdown {
-  box-sizing: border-box;
   display: none;
   grid-auto-flow: row;
   border-radius: $magic-number;
@@ -11,14 +10,80 @@
     $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
       $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
       $effect-dropdown-shadow-1-color;
-  min-width: 250px;
+  min-width: $magic-number * 30;
   padding: $magic-number * 3;
 
+  // Positioning
   position: absolute;
-  top: 0;
+  top: calc(100% - #{$magic-number});
   left: 0;
-
   z-index: 2;
+
+  // Hard left/right should only be on desktop. If on mobile act as though they're on the bottom.
+  &[data-x-position='left'] {
+    top: auto;
+    left: 0;
+    right: auto;
+    bottom: calc(100% - #{$magic-number});
+  }
+  &[data-x-position='right'] {
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: calc(100% - #{$magic-number});
+  }
+  @media (min-width: $breakpoints-tablet) {
+    &[data-x-position='left'] {
+      top: auto;
+      left: auto;
+      right: calc(100% - #{$magic-number});
+      bottom: auto;
+    }
+    &[data-x-position='right'] {
+      top: auto;
+      left: calc(100% - #{$magic-number});
+      right: auto;
+      bottom: auto;
+    }
+  }
+  // Other positions work on all viewports
+  &[data-y-position='top'] {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: calc(100% - #{$magic-number});
+  }
+  &[data-y-position='bottom'] {
+    top: calc(100% - #{$magic-number});
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+  &[data-x-position='left'][data-y-position='top'] {
+    top: auto;
+    left: 0;
+    right: auto;
+    bottom: calc(100% - #{$magic-number});
+  }
+  &[data-x-position='left'][data-y-position='bottom'] {
+    top: calc(100% - #{$magic-number});
+    left: 0;
+    right: auto;
+    bottom: auto;
+  }
+  &[data-x-position='right'][data-y-position='top'] {
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: calc(100% - #{$magic-number});
+  }
+  &[data-x-position='right'][data-y-position='bottom'] {
+    top: calc(100% - #{$magic-number});
+    left: auto;
+    right: 0;
+    bottom: auto;
+  }
+  // Dropdowns that only consist of list-buttons have no padding
   &.buttons {
     padding: 0;
     .list-button:first-child {
@@ -33,7 +98,7 @@
 }
 @media (min-width: $breakpoints-tablet) {
   .dropdown {
-    min-width: $magic-number * 50;
+    min-width: $magic-number * 30;
   }
 }
 .dropdown-trigger {
@@ -45,73 +110,3 @@
     display: grid;
   }
 }
-
-// Main Nav
-//   .nav-wrapper {
-//     display: grid;
-//   }
-//   #nav {
-//     // Stretch all child components so that we can position dropdowns accurately. We want the content to be the same height as the wrapper
-//     align-items: stretch;
-//     .dropdown-trigger {
-//       display: grid;
-//       align-self: stretch;
-//       align-content: center;
-//     }
-
-//     // Immediate child anchors should not be underlined
-//     > a,
-//     > a:hover,
-//     > div > a,
-//     > div > a:hover {
-//       text-decoration: none;
-//     }
-
-//     // Anchor colours
-//     a:not(.button) {
-//       color: #232323;
-//       &.router-link-exact-active {
-//         color: $color-actions-primary-default;
-//       }
-//     }
-
-//     .logo,
-//     .user-link {
-//       grid-gap: $magic-number;
-//       // min-width: 120px;
-//       img {
-//         min-width: $magic-number * 3;
-//         min-height: $magic-number * 3;
-//       }
-//     }
-
-//     // Dock all dropdown instances to the bottom of the navbar, position left/right accordingly
-//     .dropdown {
-//       position: absolute;
-//       // Offset by nav height
-//       top: ($magic-number * 8);
-//       max-height: calc(100vh - #{$magic-number * 20});
-//       overflow-y: auto;
-//       &.buttons {
-//         .list-button:first-child {
-//           border-top-left-radius: 0;
-//           border-top-right-radius: 0;
-//         }
-//       }
-
-//       &.queries-dropdown {
-//         left: $magic-number * 2;
-//         width: calc(100vw - #{$magic-number * 4});
-//         @media (min-width: $breakpoints-desktop) {
-//           left: auto;
-//           right: $magic-number * 17;
-//           max-width: $magic-number * 100;
-//           width: calc(100vw - #{$magic-number * 34});
-//         }
-//       }
-
-//       &.user-dropdown {
-//         right: 0;
-//       }
-//     }
-//   }

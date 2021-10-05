@@ -61,6 +61,9 @@
               <li><a href="#forms__action">Action buttons</a></li>
             </ul>
           </li>
+          <li>
+            <a href="#dropdowns">Dropdowns</a>
+          </li>
         </ul>
       </nav>
       <main>
@@ -1040,34 +1043,26 @@ P R E F O R M A T T E D T E X T
                 ></path></svg
             ></a>
           </nav>
-
           <nav>
-            <div class="logo-name-wrapper dropdown-trigger" data-v-33fe1c3c="">
-              <div class="logo" data-v-33fe1c3c="">
+            <div class="logo-name-wrapper dropdown-trigger">
+              <div class="logo">
                 <img
                   src="https://static1.squarespace.com/static/5f50f8731ff54a132283757b/t/5f510b6df2310a24770ebf7b/1614777163205/?format=500w"
                   height="56"
                   alt="ConnectNow"
-                  data-v-33fe1c3c=""
                 />
               </div>
-              <h1 class="text-style-4" data-v-33fe1c3c="">ConnectNow</h1>
+
+              <h1 class="text-style-4">
+                <a class="text-style-4" href="javascript:void(0)">ConnectNow</a>
+              </h1>
               <div class="dropdown buttons">
-                <button
-                  class="list-button list-button-large"
-                  data-v-06e9b0c8=""
-                >
-                  ConnectNow <span data-v-06e9b0c8="">(active)</span></button
-                ><button class="list-button" data-v-06e9b0c8="">
-                  New Test Company 2
-                  <!----></button
-                ><button class="list-button" data-v-06e9b0c8="">
-                  Tele Engineer Secondary Team
-                  <!----></button
-                ><a
-                  href="#/welcome/choose-company"
-                  class="button list-button"
-                  data-v-06e9b0c8=""
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
                   >Create a new company</a
                 >
               </div>
@@ -1094,7 +1089,10 @@ P R E F O R M A T T E D T E X T
                 </svg>
                 Online</a
               >
-              <a href="#" class="grid grid-column-flow gap-8 text-style-6">
+              <a
+                href="javascript:void(0)"
+                class="grid grid-column-flow gap-8 text-style-6 dropdown-trigger"
+              >
                 <svg
                   width="40"
                   height="41"
@@ -1172,31 +1170,230 @@ P R E F O R M A T T E D T E X T
                   </g>
                 </svg>
                 Jane
+                <div
+                  class="dropdown buttons"
+                  data-x-position="right"
+                  data-y-position="bottom"
+                >
+                  <button class="list-button list-button">User settings</button
+                  ><button class="list-button">Log out</button>
+                </div>
               </a>
             </div>
           </nav>
-        </section>
-        <section id="dropdowns">
-          <div class="dropdown-trigger">
-            Weeee dropdown
-            <div class="dropdown buttons">
-              <button class="list-button list-button-large" data-v-06e9b0c8="">
-                ConnectNow <span data-v-06e9b0c8="">(active)</span></button
-              ><button class="list-button" data-v-06e9b0c8="">
-                New Test Company 2
-                <!----></button
-              ><button class="list-button" data-v-06e9b0c8="">
-                Tele Engineer Secondary Team
-                <!----></button
-              ><a
-                href="#/welcome/choose-company"
-                class="button list-button"
-                data-v-06e9b0c8=""
-                >Create a new company</a
-              >
-            </div>
+          <div style="margin: 100px 0; text-align: center">
+            This space is left intentionally blank for the dropdown
           </div>
         </section>
+        <article id="dropdowns">
+          <header>
+            <h2>Dropdowns</h2>
+          </header>
+          <div
+            style="
+              margin: 0 auto;
+              display: grid;
+              width: 75%;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr 200px 1fr 200px 1fr 200px 1fr 200px;
+              align-items: center;
+              justify-items: center;
+            "
+          >
+            <div
+              class="dropdown-trigger"
+              style="display: inline-grid; width: fit-content"
+            >
+              <a href="javascript:void(0)">Left Top dropdown</a>
+              <div
+                class="dropdown buttons"
+                data-x-position="left"
+                data-y-position="top"
+              >
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
+                  >Create a new company</a
+                >
+              </div>
+            </div>
+            <div
+              class="dropdown-trigger"
+              style="display: inline-grid; width: fit-content"
+            >
+              <a href="javascript:void(0)">Right Top dropdown</a>
+              <div
+                class="dropdown buttons"
+                data-x-position="right"
+                data-y-position="top"
+              >
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
+                  >Create a new company</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-muted"
+              style="margin: 100px auto; text-align: center; grid-column: 1/3"
+            >
+              This space is left intentionally blank for the dropdown
+            </div>
+            <div
+              class="dropdown-trigger"
+              style="display: inline-grid; width: fit-content"
+            >
+              <a href="javascript:void(0)">Left Bottom dropdown</a>
+              <div
+                class="dropdown buttons"
+                data-x-position="left"
+                data-y-position="bottom"
+              >
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
+                  >Create a new company</a
+                >
+              </div>
+            </div>
+            <div
+              class="dropdown-trigger"
+              style="display: inline-grid; width: fit-content"
+            >
+              <a href="javascript:void(0)">Right Bottom dropdown</a>
+              <div
+                class="dropdown buttons"
+                data-x-position="right"
+                data-y-position="bottom"
+              >
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
+                  >Create a new company</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-muted"
+              style="margin: 100px auto; text-align: center; grid-column: 1/3"
+            >
+              This space is left intentionally blank for the dropdown
+            </div>
+            <div
+              class="dropdown-trigger"
+              style="display: inline-grid; width: fit-content"
+            >
+              <a href="javascript:void(0)">Left no Y dropdown</a>
+              <div class="dropdown buttons" data-x-position="left">
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
+                  >Create a new company</a
+                >
+              </div>
+            </div>
+            <div
+              class="dropdown-trigger"
+              style="display: inline-grid; width: fit-content"
+            >
+              <a href="javascript:void(0)">Right no Y dropdown</a>
+              <div class="dropdown buttons" data-x-position="right">
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
+                  >Create a new company</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-muted"
+              style="margin: 100px auto; text-align: center; grid-column: 1/3"
+            >
+              This space is left intentionally blank for the dropdown
+            </div>
+            <div
+              class="dropdown-trigger"
+              style="display: inline-grid; width: fit-content"
+            >
+              <a href="javascript:void(0)">Top no X dropdown</a>
+              <div class="dropdown buttons" data-y-position="top">
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
+                  >Create a new company</a
+                >
+              </div>
+            </div>
+            <div
+              class="dropdown-trigger"
+              style="display: inline-grid; width: fit-content"
+            >
+              <a href="javascript:void(0)">Bottom no X dropdown</a>
+              <div class="dropdown buttons" data-y-position="bottom">
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
+                  >Create a new company</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-muted"
+              style="margin: 100px auto; text-align: center; grid-column: 1/3"
+            >
+              This space is left intentionally blank for the dropdown
+            </div>
+            <div
+              class="dropdown-trigger"
+              style="display: inline-grid; width: fit-content"
+            >
+              <a href="javascript:void(0)">No attributes dropdown</a>
+              <div class="dropdown buttons">
+                <button class="list-button list-button-large">
+                  ConnectNow <span>(active)</span></button
+                ><button class="list-button">New Test Company 2</button
+                ><button class="list-button">
+                  Tele Engineer Secondary Team</button
+                ><a href="#/welcome/choose-company" class="button list-button"
+                  >Create a new company</a
+                >
+              </div>
+            </div>
+            <div>&nbsp;</div>
+            <div
+              class="text-muted"
+              style="margin: 100px auto; text-align: center; grid-column: 1/3"
+            >
+              This space is left intentionally blank for the dropdown
+            </div>
+          </div>
+        </article>
+        <p><a href="#top">[Top]</a></p>
       </main>
       <footer>
         <p>
