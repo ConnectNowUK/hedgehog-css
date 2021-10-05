@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /* latin-ext */
 @font-face {
   font-family: 'Roboto';
@@ -88,58 +90,97 @@
   }
 }
 
+$theme-font-size: (
+  1: $font-style-1-font-size,
+  2: $font-style-2-font-size,
+  3: $font-style-3-font-size,
+  4: $font-style-4-font-size,
+  5: $font-style-5-font-size,
+  6: $font-style-6-font-size,
+  7: $font-style-7-font-size,
+);
+
+$theme-font-family: (
+  1: $font-style-1-font-family,
+  2: $font-style-2-font-family,
+  3: $font-style-3-font-family,
+  4: $font-style-4-font-family,
+  5: $font-style-5-font-family,
+  6: $font-style-6-font-family,
+  7: $font-style-7-font-family,
+);
+
+$theme-font-weight: (
+  1: $font-style-1-font-weight,
+  2: $font-style-2-font-weight,
+  3: $font-style-3-font-weight,
+  4: $font-style-4-font-weight,
+  5: $font-style-5-font-weight,
+  6: $font-style-6-font-weight,
+  7: $font-style-7-font-weight,
+);
+
+$theme-text-decoration: (
+  1: $font-style-1-text-decoration,
+  2: $font-style-2-text-decoration,
+  3: $font-style-3-text-decoration,
+  4: $font-style-4-text-decoration,
+  5: $font-style-5-text-decoration,
+  6: $font-style-6-text-decoration,
+  7: $font-style-7-text-decoration,
+);
+
+$theme-line-height: (
+  1: $font-style-1-line-height,
+  2: $font-style-2-line-height,
+  3: $font-style-3-line-height,
+  4: $font-style-4-line-height,
+  5: $font-style-5-line-height,
+  6: $font-style-6-line-height,
+  7: $font-style-7-line-height,
+);
+
+@mixin text-style($size) {
+  font-size: map-get($theme-font-size, $size);
+  font-family: map-get($theme-font-family, $size);
+  font-weight: map-get($theme-font-weight, $size);
+  text-decoration: map-get($theme-text-decoration, $size);
+  line-height: map-get($theme-line-height, $size);
+}
+
+.text-style-1,
+%text-style-1 {
+  @include text-style(1);
+}
+
 .text-style-2,
 %text-style-2 {
-  font-size: $font-style-2-font-size;
-  font-family: $font-style-2-font-family;
-  font-weight: $font-style-2-font-weight;
-  text-decoration: $font-style-2-text-decoration;
-  line-height: $font-style-2-line-height;
+  @include text-style(2);
 }
 
 .text-style-3,
 %text-style-3 {
-  font-size: $font-style-3-font-size;
-  font-family: $font-style-3-font-family;
-  font-weight: $font-style-3-font-weight;
-  text-decoration: $font-style-3-text-decoration;
-  line-height: $font-style-3-line-height;
+  @include text-style(3);
 }
 
 .text-style-4,
 %text-style-4 {
-  font-size: $font-style-4-font-size;
-  font-family: $font-style-4-font-family;
-  font-weight: $font-style-4-font-weight;
-  text-decoration: $font-style-4-text-decoration;
-  line-height: $font-style-4-line-height;
+  @include text-style(4);
 }
 
 .text-style-5,
 %text-style-5 {
-  font-size: $font-style-5-font-size;
-  font-family: $font-style-5-font-family;
-  font-weight: $font-style-5-font-weight;
-  text-decoration: $font-style-5-text-decoration;
-  line-height: $font-style-5-line-height;
+  @include text-style(5);
 }
 
 .text-style-6,
 %text-style-6 {
-  font-size: $font-style-6-font-size;
-  font-family: $font-style-6-font-family;
-  font-weight: $font-style-6-font-weight;
-  text-decoration: $font-style-6-text-decoration;
-  line-height: $font-style-6-line-height;
+  @include text-style(6);
 }
 
 .text-style-7,
 %text-style-7 {
-  font-size: $font-style-7-font-size;
-  font-family: $font-style-7-font-family;
-  font-weight: $font-style-7-font-weight;
-  text-decoration: $font-style-7-text-decoration;
-  line-height: $font-style-7-line-height;
+  @include text-style(7);
 }
 
 .text-bold-style-1,
@@ -291,6 +332,30 @@ a {
   @extend %text-links-style-6;
 }
 
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  overflow: hidden;
+}
+.ellipsis,
+%ellipsis {
+  @include ellipsis();
+}
+
+@mixin text-muted {
+}
+
+.text-muted,
+%text-muted {
+  @include text-muted();
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    @extend %text-style-#{$i};
+  }
+}
+
 .button,
 a.button,
 %button,
@@ -299,13 +364,12 @@ input[type='submit'],
 input[type='button'],
 input[type='reset'] {
   word-break: break-word;
+  text-align: center;
   @extend %text-bold-style-7;
+  line-height: $magic-number * 2;
   &.button-large {
     @extend %text-bold-style-6;
     color: $color-text-white;
-  }
-  &.list-button {
-    @extend %text-style-6;
   }
 }
 
@@ -325,15 +389,11 @@ a.text-danger,
   }
 }
 
-.ellipsis,
-%ellipsis {
-  text-overflow: ellipsis;
-  /* white-space: nowrap; */
-  overflow: hidden;
-}
-
-@for $i from 1 through 6 {
-  h#{$i} {
-    @extend %text-style-#{$i};
+.text-success,
+%text-success {
+  color: $color-text-success;
+  &:before {
+    content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.85715 11.0937L4 8.236L4.80743 7.42857L6.85715 9.47771L11.1914 5.14286L12 5.95143L6.85715 11.0937Z' fill='%231B8811'/%3E%3Cpath d='M8 0C6.41775 0 4.87103 0.469192 3.55544 1.34824C2.23985 2.22729 1.21447 3.47672 0.608967 4.93853C0.00346626 6.40034 -0.15496 8.00887 0.153721 9.56072C0.462403 11.1126 1.22433 12.538 2.34315 13.6569C3.46197 14.7757 4.88743 15.5376 6.43928 15.8463C7.99113 16.155 9.59966 15.9965 11.0615 15.391C12.5233 14.7855 13.7727 13.7602 14.6518 12.4446C15.5308 11.129 16 9.58225 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842854 10.1217 0 8 0ZM8 14.8571C6.64379 14.8571 5.31803 14.455 4.19038 13.7015C3.06273 12.948 2.18383 11.8771 1.66483 10.6241C1.14583 9.37113 1.01003 7.99239 1.27462 6.66224C1.5392 5.33208 2.19228 4.11026 3.15127 3.15127C4.11026 2.19228 5.33209 1.5392 6.66224 1.27461C7.9924 1.01003 9.37114 1.14582 10.6241 1.66483C11.8771 2.18383 12.948 3.06272 13.7015 4.19038C14.455 5.31803 14.8571 6.64378 14.8571 8C14.8571 9.81863 14.1347 11.5628 12.8487 12.8487C11.5628 14.1347 9.81863 14.8571 8 14.8571Z' fill='%231B8811'/%3E%3C/svg%3E%0A");
+    margin-right: $magic-number / 2;
   }
 }
