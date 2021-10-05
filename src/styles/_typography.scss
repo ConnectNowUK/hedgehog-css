@@ -362,9 +362,14 @@ a.text-danger,
   }
 }
 
+.text-positive,
+%text-positive {
+  color: $color-text-success;
+}
+
 .text-success,
 %text-success {
-  color: $color-text-success;
+  @extend %text-positive;
   &:before {
     content: $icon-checkmark;
     margin-right: $magic-number / 2;

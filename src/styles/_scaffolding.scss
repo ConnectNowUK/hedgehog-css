@@ -77,6 +77,11 @@ audio::-webkit-media-controls-enclosure {
   justify-content: space-between;
 }
 
+.gap-8,
+%gap-8 {
+  gap: $magic-number;
+}
+
 fieldset,
 form,
 section,
@@ -104,7 +109,26 @@ nav {
 .logo-name-wrapper {
   @extend %grid;
   @extend %grid-column-flow;
+  @extend %text-style-4;
   gap: $magic-number;
+  grid-template-columns: auto 1fr;
+  > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @extend %ellipsis;
+  }
+}
+
+.navbar-links {
+  @extend %grid;
+  @extend %grid-column-flow;
+  > a,
+  button {
+    text-decoration: none;
+  }
 }
 
 .main-grid {
