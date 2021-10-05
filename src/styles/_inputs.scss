@@ -210,6 +210,7 @@ a.button {
     padding-bottom: $magic-number;
   }
 }
+
 .list-item,
 %list-item {
   @include list-item();
@@ -261,6 +262,9 @@ a.button {
     cursor: not-allowed;
   }
 }
+
+a.list-button,
+button.list-button,
 .list-button,
 %list-button {
   @include list-button();
