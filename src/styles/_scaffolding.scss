@@ -109,8 +109,8 @@ nav {
 .logo-name-wrapper {
   @extend %grid;
   @extend %grid-column-flow;
+  @extend %gap-8;
   @extend %text-style-4;
-  gap: $magic-number;
   grid-template-columns: auto 1fr;
   > h1,
   h2,

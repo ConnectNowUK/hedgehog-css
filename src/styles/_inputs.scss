@@ -46,6 +46,9 @@ textarea {
     & + .input-help-text {
       @extend %text-error;
     }
+    &:not(:focus) {
+      @extend %animation-shake;
+    }
   }
   &.input-success,
   &[data-state='success'] {
