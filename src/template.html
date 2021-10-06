@@ -1066,15 +1066,30 @@ P R E F O R M A T T E D T E X T
                 />
               </div>
               <h1 class="text-style-4">
-                <a class="text-style-4" href="javascript:void(0)">ConnectNow</a>
+                <a
+                  class="text-style-4"
+                  href="javascript:void(0)"
+                  aria-label="Current company - ConnectNow"
+                  role="menu"
+                  aria-haspopup="menu"
+                  >ConnectNow</a
+                >
               </h1>
-              <div class="dropdown buttons">
-                <button class="list-button list-button-large">
+              <div
+                class="dropdown buttons"
+                role="menu"
+                aria-label="Company selection dropdown"
+              >
+                <button class="list-button list-button-large" role="menuitem">
                   ConnectNow <span>(active)</span></button
-                ><button class="list-button">New Test Company 2</button
-                ><button class="list-button">
+                ><button class="list-button" role="menuitem">
+                  New Test Company 2</button
+                ><button class="list-button" role="menuitem">
                   Tele Engineer Secondary Team</button
-                ><a href="#/welcome/choose-company" class="button list-button"
+                ><a
+                  href="#/welcome/choose-company"
+                  class="button list-button"
+                  role="menuitem"
                   >Create a new company</a
                 >
               </div>
@@ -1087,23 +1102,34 @@ P R E F O R M A T T E D T E X T
                 <a
                   href="javascript:void(0)"
                   class="grid grid-column-flow gap-8 text-bold-style-6"
+                  role="menu"
+                  aria-haspopup="menu"
+                  aria-label="Queries - none waiting"
                   >• Queries
                 </a>
                 <div
                   class="dropdown grid"
                   data-x-position="right"
                   data-y-position="bottom"
+                  role="menu"
+                  aria-label="Queries dropdown - 3 ongoing queries"
                 >
                   <div class="text-bold-style-6">3 ongoing queries</div>
-                  <div class="card">
+                  <div
+                    class="card"
+                    role="article"
+                    aria-label="Chat on Desktop Support queue"
+                  >
                     <div>
                       <b>Desktop Support</b>
                       <p class="text-muted">On chat.connectnow.org.uk</p>
                     </div>
-                    <div class="buttons">
-                      <button class="danger">Mark as done</button>
-                      <button>Transfer</button>
-                      <button>Reopen link</button>
+                    <div class="buttons" role="list" aria-label="Actions">
+                      <button class="danger" role="listitem">
+                        Mark as done
+                      </button>
+                      <button role="listitem">Transfer</button>
+                      <button role="listitem">Reopen link</button>
                     </div>
                   </div>
                 </div>
@@ -1112,6 +1138,9 @@ P R E F O R M A T T E D T E X T
                 <a
                   href="javascript:void(0)"
                   class="grid grid-column-flow gap-8 text-positive"
+                  aria-label="Current status - online"
+                  role="menu"
+                  aria-haspopup="menu"
                 >
                   <svg
                     width="22"
@@ -1134,6 +1163,8 @@ P R E F O R M A T T E D T E X T
                   class="dropdown grid"
                   data-x-position="right"
                   data-y-position="bottom"
+                  role="form"
+                  aria-label="Status dropdown"
                 >
                   <div class="grid gap-8">
                     <label>Status</label>
@@ -1165,6 +1196,9 @@ P R E F O R M A T T E D T E X T
                 <a
                   href="javascript:void(0)"
                   class="grid grid-column-flow gap-8 text-style-6"
+                  aria-label="Current user - Jane"
+                  role="menu"
+                  aria-haspopup="menu"
                 >
                   <svg
                     width="40"
@@ -1248,9 +1282,12 @@ P R E F O R M A T T E D T E X T
                   class="dropdown buttons"
                   data-x-position="right"
                   data-y-position="bottom"
+                  role="menu"
+                  aria-label="User dropdown"
                 >
-                  <button class="list-button list-button">User settings</button
-                  ><button class="list-button">Log out</button>
+                  <button class="list-button list-button" role="menuitem">
+                    User settings</button
+                  ><button class="list-button" role="menuitem">Log out</button>
                 </div>
               </div>
             </div>
