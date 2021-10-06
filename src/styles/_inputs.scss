@@ -39,7 +39,9 @@ textarea {
     display: block;
   }
   &.input-error,
-  &[data-state='error'] {
+  &[data-state='error'],
+  &:not(:placeholder-shown):invalid,
+  &:not(:placeholder-shown):out-of-range {
     border-color: $color-borders-error;
     & + .input-help-text {
       @extend %text-error;
