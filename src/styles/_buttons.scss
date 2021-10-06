@@ -49,6 +49,14 @@
     background-color: $color-text-danger;
     color: $color-text-white;
   }
+
+  &.white {
+    background-color: $color-actions-white-default;
+    color: $color-text-black;
+    &:hover {
+      background-color: $color-actions-white-hover;
+    }
+  }
 }
 
 .button,
