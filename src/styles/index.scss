@@ -1,6 +1,7 @@
 $magic-number: 8px;
 
 @import 'variables';
+@import 'helpers';
 @import 'icons';
 @import 'animations';
 @import 'typography';
@@ -10,3 +11,4 @@ $magic-number: 8px;
 @import 'chat';
 @import 'cards';
 @import 'dropdowns';
+@import 'layouts';

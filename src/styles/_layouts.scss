@@ -1,0 +1,228 @@
+.main-grid {
+  display: grid;
+  grid-template:
+    'nav nav' minmax($magic-number * 9, auto)
+    'sidebar sidebar' $magic-number * 9
+    'main main' minmax(100%, auto) / 1fr 1fr;
+  gap: 0 $magic-number;
+  #sidebar,
+  > .sidebar {
+    grid-area: sidebar;
+    position: sticky;
+    min-height: auto;
+    padding-bottom: $magic-number * 3;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    z-index: 1;
+  }
+  &.no-sidebar {
+    grid-template:
+      'nav nav' minmax($magic-number * 9, auto)
+      'main main' minmax(100%, auto) / 1fr 1fr;
+  }
+  > main {
+    grid-area: main;
+    padding-top: $magic-number * 2;
+    padding-right: $magic-number * 2;
+    padding-bottom: $magic-number * 2;
+    padding-left: $magic-number * 2;
+    display: inline-grid;
+    align-items: flex-start;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: $breakpoints-tablet) {
+  .main-grid {
+    gap: 0 $magic-number * 3;
+    grid-template:
+      'nav nav nav nav' minmax($magic-number * 9, auto)
+      'sidebar main main main' minmax(calc(100vh - #{$magic-number * 9}), auto)
+      / minmax(auto, 1fr) 1fr 1fr 1fr;
+    #sidebar,
+    > .sidebar {
+      grid-auto-flow: row;
+      overflow-x: unset;
+    }
+    &.no-sidebar {
+      grid-template:
+        'nav nav nav nav' minmax($magic-number * 9, auto)
+        'main main main main' minmax(100%, auto)
+        / minmax(auto, 1fr) 1fr 1fr 1fr;
+      > main {
+        padding-left: $magic-number * 6;
+      }
+    }
+    &.inverted {
+      grid-template:
+        'nav nav nav nav' minmax($magic-number * 9, auto)
+        'main main main sidebar' minmax(100%, auto)
+        / 1fr 1fr 1fr minmax(auto, 1fr);
+    }
+    > main {
+      padding-top: $magic-number * 3;
+      padding-right: $magic-number * 6;
+      padding-bottom: $magic-number * 3;
+      padding-left: unset;
+    }
+  }
+}
+
+// .second-grid {
+//   display: grid;
+//   grid-template:
+//     'nav nav' 1fr
+//     'sidebar sidebar' auto
+//     'main main' minmax(calc(100vh - 72px), auto)
+//     / min-content 1fr;
+//   padding-left: 48px;
+//   padding-right: 48px;
+//   grid-gap: 0 $magic-number;
+//   #sidebar,
+//   > .sidebar {
+//     grid-area: sidebar;
+//     position: sticky;
+//     min-height: auto;
+//     padding-bottom: $magic-number * 3;
+//     grid-auto-flow: column;
+//     overflow-x: scroll;
+//     z-index: 1;
+//   }
+//   > main {
+//     grid-area: main;
+//     padding-top: $magic-number * 2;
+//     padding-right: $magic-number * 2;
+//     padding-bottom: $magic-number * 2;
+//     padding-left: $magic-number * 2;
+//     display: inline-grid;
+//     align-items: flex-start;
+//     align-self: flex-start;
+//   }
+//   > nav {
+//     grid-area: nav;
+//   }
+// }
+
+.layout-primary {
+  display: block;
+  position: relative;
+  .sidebar,
+  #sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 100vh;
+    height: 100vh;
+    z-index: 2;
+    align-self: flex-start;
+    &.collapsible {
+      position: sticky;
+      min-height: auto;
+      padding-bottom: $magic-number * 3;
+      grid-auto-flow: column;
+      overflow-x: scroll;
+      max-height: unset;
+      height: unset;
+      z-index: 1;
+      grid-auto-flow: column;
+      overflow-x: scroll;
+    }
+  }
+  > main {
+    align-self: flex-start;
+    padding-top: $magic-number * 3;
+    padding-bottom: $magic-number * 3;
+  }
+}
+
+.layout-fullscreen {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  > main {
+    padding-top: $magic-number * 3;
+    padding-bottom: $magic-number * 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.sidebar,
+#sidebar {
+  @extend %container-padding;
+  padding-top: $magic-number * 3;
+  &.grid {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: $breakpoints-tablet) {
+  .layout-primary {
+    display: grid;
+    gap: 0;
+    grid-template:
+      'nav nav nav nav' minmax(72px, auto)
+      'sidebar main main main' minmax(calc(100vh - 72px), auto)
+      / min-content 1fr 1fr 1fr;
+    #sidebar,
+    .sidebar {
+      min-width: 25vw;
+      position: unset;
+      grid-area: sidebar;
+      + main {
+        padding-left: $magic-number * 3;
+      }
+      &.collapsible {
+        grid-auto-flow: row;
+        overflow-x: unset;
+      }
+    }
+
+    &.inverted {
+      grid-template:
+        'nav nav nav nav' minmax(72px, auto)
+        'main main main sidebar' minmax(calc(100vh - 72px), auto)
+        / 1fr 1fr 1fr min-content;
+      #sidebar,
+      > .sidebar {
+        + main {
+          padding-left: $magic-number * 6;
+          padding-right: $magic-number * 3;
+        }
+      }
+    }
+
+    > main {
+      grid-area: main;
+      padding-right: $magic-number * 6;
+      padding-left: $magic-number * 6;
+    }
+    > nav {
+      grid-area: nav;
+    }
+  }
+
+  .layout-fullscreen {
+    display: grid;
+    gap: 0 $magic-number * 3;
+    grid-template:
+      'nav nav nav nav' min-content
+      '. main main .' 1fr
+      / 1fr 1fr 1fr 1fr;
+    > main {
+      grid-area: main;
+      padding: 0;
+    }
+    > nav {
+      grid-area: nav;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}

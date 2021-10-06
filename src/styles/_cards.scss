@@ -13,6 +13,7 @@
       $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
       $effect-dropdown-shadow-1-color;
   border-radius: $magic-number;
+  box-sizing: border-box;
   grid-template:
     'card-img'
     'card-body'

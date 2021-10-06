@@ -122,7 +122,7 @@ a.button {
   }
 
   &:not(.no-action) {
-    padding-right: $magic-number * 4;
+    padding-right: $magic-number * 6;
     &::after {
       position: absolute;
       right: $magic-number * 2;

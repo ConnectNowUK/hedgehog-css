@@ -31,6 +31,11 @@ body {
   }
 }
 
+.sidebar,
+main {
+  @extend %container-padding;
+}
+
 #root {
   display: flex;
   align-items: center;
@@ -129,75 +134,5 @@ nav {
   button,
   .dropdown-trigger > a {
     text-decoration: none;
-  }
-}
-
-.main-grid {
-  display: grid;
-  grid-template:
-    'nav nav' minmax($magic-number * 9, auto)
-    'sidebar sidebar' $magic-number * 9
-    'main main' minmax(100%, auto) / 1fr 1fr;
-  grid-gap: 0 $magic-number;
-  #sidebar,
-  > .sidebar {
-    grid-area: sidebar;
-    position: sticky;
-    min-height: auto;
-    padding-bottom: $magic-number * 3;
-    grid-auto-flow: column;
-    overflow-x: scroll;
-    z-index: 1;
-  }
-  &.no-sidebar {
-    grid-template:
-      'nav nav' minmax($magic-number * 9, auto)
-      'main main' minmax(100%, auto) / 1fr 1fr;
-  }
-  > main {
-    grid-area: main;
-    padding-top: $magic-number * 2;
-    padding-right: $magic-number * 2;
-    padding-bottom: $magic-number * 2;
-    padding-left: $magic-number * 2;
-    display: inline-grid;
-    align-items: flex-start;
-    align-self: flex-start;
-  }
-}
-
-@media (min-width: $breakpoints-tablet) {
-  .main-grid {
-    grid-gap: 0 $magic-number * 3;
-    grid-template:
-      'nav nav nav nav' minmax($magic-number * 9, auto)
-      'sidebar main main main' minmax(calc(100vh - #{$magic-number * 9}), auto)
-      / minmax(auto, 1fr) 1fr 1fr 1fr;
-    #sidebar,
-    > .sidebar {
-      grid-auto-flow: row;
-      overflow-x: unset;
-    }
-    &.no-sidebar {
-      grid-template:
-        'nav nav nav nav' minmax($magic-number * 9, auto)
-        'main main main main' minmax(100%, auto)
-        / minmax(auto, 1fr) 1fr 1fr 1fr;
-      > main {
-        padding-left: $magic-number * 6;
-      }
-    }
-    &.inverted {
-      grid-template:
-        'nav nav nav nav' minmax($magic-number * 9, auto)
-        'main main main sidebar' minmax(100%, auto)
-        / 1fr 1fr 1fr minmax(auto, 1fr);
-    }
-    > main {
-      padding-top: $magic-number * 3;
-      padding-right: $magic-number * 6;
-      padding-bottom: $magic-number * 3;
-      padding-left: unset;
-    }
   }
 }
