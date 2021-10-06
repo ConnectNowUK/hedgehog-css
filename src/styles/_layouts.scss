@@ -73,7 +73,7 @@
 //   grid-template:
 //     'nav nav' 1fr
 //     'sidebar sidebar' auto
-//     'main main' minmax(calc(100vh - 72px), auto)
+//     'main main' minmax(calc(100vh - $magic-number * 9), auto)
 //     / min-content 1fr;
 //   padding-left: 48px;
 //   padding-right: 48px;
@@ -157,6 +157,10 @@
   padding-top: $magic-number * 3;
   &.grid {
     align-self: flex-start;
+    grid-auto-rows: min-content;
+  }
+  &.closed {
+    display: none;
   }
 }
 
@@ -165,18 +169,22 @@
     display: grid;
     gap: 0;
     grid-template:
-      'nav nav nav nav' minmax(72px, auto)
-      'sidebar main main main' minmax(calc(100vh - 72px), auto)
+      'nav nav nav nav' minmax($magic-number * 9, auto)
+      'sidebar main main main' minmax(calc(100vh - #{$magic-number * 9}), auto)
       / min-content 1fr 1fr 1fr;
     #sidebar,
     .sidebar {
       min-width: 25vw;
       position: unset;
       grid-area: sidebar;
+      max-height: calc(100vh - #{$magic-number * 9});
+      height: calc(100vh - #{$magic-number * 9});
       + main {
         padding-left: $magic-number * 3;
       }
       &.collapsible {
+        max-height: calc(100vh - #{$magic-number * 9});
+        height: calc(100vh - #{$magic-number * 9});
         grid-auto-flow: row;
         overflow-x: unset;
       }
@@ -184,8 +192,11 @@
 
     &.inverted {
       grid-template:
-        'nav nav nav nav' minmax(72px, auto)
-        'main main main sidebar' minmax(calc(100vh - 72px), auto)
+        'nav nav nav nav' minmax($magic-number * 9, auto)
+        'main main main sidebar' minmax(
+          calc(100vh - #{$magic-number * 9}),
+          auto
+        )
         / 1fr 1fr 1fr min-content;
       #sidebar,
       > .sidebar {

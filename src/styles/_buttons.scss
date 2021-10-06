@@ -79,7 +79,7 @@ a.button {
   position: relative;
   background-color: $color-background-white;
   color: $color-text-black;
-
+  box-sizing: border-box;
   span {
     display: block;
     @include text-muted();

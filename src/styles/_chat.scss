@@ -35,16 +35,16 @@
 //   }
 // }
 
-.sidebar {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  @media (min-width: $breakpoints-tablet) {
-    position: relative;
-  }
-}
+// .sidebar {
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   @media (min-width: $breakpoints-tablet) {
+//     position: relative;
+//   }
+// }
 
 .chat-app {
   display: grid;
@@ -80,10 +80,6 @@
   a {
     align-self: end;
   }
-}
-
-.sidebar.closed {
-  display: none;
 }
 
 .message-container {

@@ -17,7 +17,7 @@
   position: absolute;
   top: calc(100% - #{$magic-number});
   left: 0;
-  z-index: 2;
+  z-index: 5;
 
   @extend %animation-fade-in;
 

@@ -50,7 +50,7 @@
   > .buttons {
     grid-area: card-buttons;
     display: grid;
-    @media (max-width: $breakpoints-tablet) {
+    @media (max-width: $breakpoints-tablet - 1) {
       border-top: 1px solid $color-borders-gray;
       margin-left: -#{$magic-number * 2};
       margin-right: -#{$magic-number * 2};
