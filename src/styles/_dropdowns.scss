@@ -19,6 +19,8 @@
   left: 0;
   z-index: 2;
 
+  @extend %animation-fade-in;
+
   // Hard left/right should only be on desktop. If on mobile act as though they're on the bottom.
   &[data-x-position='left'] {
     top: auto;
