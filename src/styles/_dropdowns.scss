@@ -104,6 +104,7 @@
 .dropdown-trigger {
   overflow: visible;
   position: relative;
+  cursor: unset;
   &:hover .dropdown,
   &:focus-within .dropdown,
   .dropdown:hover {

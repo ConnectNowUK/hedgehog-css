@@ -126,7 +126,8 @@ nav {
   @extend %grid;
   @extend %grid-column-flow;
   > a,
-  button {
+  button,
+  .dropdown-trigger > a {
     text-decoration: none;
   }
 }
