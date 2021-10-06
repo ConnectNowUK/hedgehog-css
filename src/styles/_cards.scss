@@ -2,7 +2,7 @@
 
 .card {
   @extend %grid;
-  gap: $magic-number * 2;
+  gap: 0 $magic-number * 2;
   padding: $magic-number * 2;
   background-color: $color-background-white;
   /* Dropdown Shadow */
@@ -13,9 +13,16 @@
       $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
       $effect-dropdown-shadow-1-color;
   border-radius: $magic-number;
+  grid-template:
+    'card-img'
+    'card-body'
+    'card-buttons';
   @media (min-width: $breakpoints-tablet) {
     min-width: $magic-number * 70;
-    grid-auto-flow: column;
+    grid-template:
+      'card-img card-img'
+      'card-body card-buttons'
+      / 1fr auto;
     align-items: center;
     justify-content: space-between;
   }
@@ -23,7 +30,12 @@
     @extend %ellipsis;
     word-break: break-word;
   }
+  > .card-body {
+    grid-area: card-body;
+  }
   > img {
+    grid-area: card-img;
+    margin-bottom: $magic-number * 2;
     margin-left: -#{$magic-number * 2};
     margin-right: -#{$magic-number * 2};
     margin-top: -#{$magic-number * 2};
@@ -32,11 +44,13 @@
     max-height: $magic-number * 50;
   }
   > .buttons {
+    grid-area: card-buttons;
     display: grid;
     @media (max-width: $breakpoints-tablet) {
       border-top: 1px solid $color-borders-gray;
       margin-left: -#{$magic-number * 2};
       margin-right: -#{$magic-number * 2};
+      margin-top: $magic-number * 2;
       grid-auto-flow: row;
       gap: 0;
       margin-bottom: -#{$magic-number * 2};
