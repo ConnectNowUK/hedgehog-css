@@ -12,7 +12,7 @@
     min-height: auto;
     padding-bottom: $magic-number * 3;
     grid-auto-flow: column;
-    overflow-x: scroll;
+    overflow-x: auto;
     z-index: 1;
   }
   &.no-sidebar {
@@ -121,7 +121,7 @@
       min-height: auto;
       padding-bottom: $magic-number * 3;
       grid-auto-flow: column;
-      overflow-x: scroll;
+      overflow-x: auto;
       max-height: unset;
       height: unset;
       z-index: 1;
