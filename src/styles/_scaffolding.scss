@@ -140,3 +140,13 @@ nav {
     text-decoration: none;
   }
 }
+
+.avatar-image {
+  background: $color-background-white;
+  color: $color-text-black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: scale-down;
+}

@@ -73,7 +73,7 @@ input[type='color'] {
     padding: 0;
   }
   &::-webkit-color-swatch {
-    height: 22px;
+    height: ($magic-number * 3) - 2;
     width: 100%;
     border-radius: $magic-number;
   }
@@ -90,7 +90,7 @@ input[type='range'] {
     margin-top: $magic-number;
   }
   &::-webkit-slider-thumb {
-    margin-top: -12px;
+    margin-top: -#{$magic-number * 2 - $magic-number / 2};
     width: $magic-number * 4;
     height: $magic-number * 4;
     background: $color-background-white;
