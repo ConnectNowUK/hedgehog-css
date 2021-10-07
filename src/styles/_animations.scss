@@ -21,6 +21,11 @@ $transition-cubic-bezier: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   @extend %animation-base;
 }
 
+%animation-slide-left {
+  animation: slide-left 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+  @extend %animation-base;
+}
+
 @keyframes shake {
   10%,
   90% {
@@ -73,5 +78,16 @@ $transition-cubic-bezier: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   to {
     opacity: 100%;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

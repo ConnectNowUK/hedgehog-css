@@ -109,7 +109,7 @@
   .sidebar,
   #sidebar {
     position: absolute;
-    top: 0;
+    top: $magic-number * 9;
     left: 0;
     right: 0;
     max-height: 100vh;
@@ -127,6 +127,7 @@
       z-index: 1;
       grid-auto-flow: column;
       overflow-x: scroll;
+      top: 0;
     }
   }
   > main {
@@ -155,6 +156,7 @@
 #sidebar {
   @extend %container-padding;
   padding-top: $magic-number * 3;
+  @extend %animation-slide-left;
   &.grid {
     align-self: flex-start;
     grid-auto-rows: min-content;
