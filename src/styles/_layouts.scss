@@ -112,8 +112,8 @@
     top: $magic-number * 9;
     left: 0;
     right: 0;
-    max-height: 100vh;
-    height: 100vh;
+    max-height: calc(100vh - #{$magic-number * 9});
+    height: calc(100vh - #{$magic-number * 9});
     z-index: 2;
     align-self: flex-start;
     &.collapsible {
@@ -152,6 +152,13 @@
   }
 }
 
+@supports (-webkit-touch-callout: none) {
+  .sidebar,
+  .scrollable {
+    max-height: -webkit-fill-available;
+  }
+}
+
 .sidebar,
 #sidebar {
   @extend %container-padding;
@@ -163,6 +170,16 @@
   }
   &.closed {
     display: none;
+  }
+  > header {
+    display: flex;
+    align-items: center;
+  }
+  .scrollable {
+    overflow-y: auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    max-height: 100%;
   }
 }
 

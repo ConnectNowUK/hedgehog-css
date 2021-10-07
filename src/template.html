@@ -1643,79 +1643,143 @@
               ></a>
             </nav>
             <aside class="sidebar no-horizontal-padding no-vertical-padding">
-              <div>
-                <header
-                  class="container-padding"
-                  style="
-                    height: 72px;
-                    display: flex;
-                    align-items: center;
-                    padding: 0px 16px;
-                  "
-                >
-                  <h4>This chat</h4>
-                </header>
-                <div class="scrollable">
-                  <button class="list-button">
-                    About this chat
-                    <span class="text-muted">Chat at ConnectNow</span></button
-                  ><button class="list-button">
-                    23 people in this chat
-                    <span class="text-muted"
-                      ><!---->
-                      Michał,
-                      <!---->
-                      Nick,
-                      <!---->
-                      Sukhi,
-                      <!---->
-                      Ashleigh,
-                      <!---->
-                      Android,
-                      <!---->
-                      Sukhi2,
-                      <!---->
-                      Ashleigh,
-                      <!---->
-                      Ranveer,
-                      <!---->
-                      Mike,
-                      <!---->
-                      Abe,
-                      <!---->
-                      Android,
-                      <!---->
-                      Ipad,
-                      <!---->
-                      Durga,
-                      <!---->
-                      Android,
-                      <!---->
-                      Nick,
-                      <!---->
-                      Saadiq,
-                      <!---->
-                      Android,
-                      <!---->
-                      Rob,
-                      <!---->
-                      Surendra,
-                      <!---->
-                      ash,
-                      <!---->
-                      Ash,
-                      <!---->
-                      Michał, and Firefox<!----></span
-                    ></button
-                  ><button disabled="" class="list-button">
-                    Flows
-                    <span class="text-muted">See all flows</span></button
-                  ><button class="list-button list-button-large text-danger">
-                    Leave chat
-                  </button>
-                </div>
+              <header
+                style="
+                  height: 72px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 0px 16px;
+                "
+              >
+                <h4>People</h4>
+                <button class="share-button">Share join link</button>
+              </header>
+              <div class="scrollable">
+                <button class="list-button">
+                  Michał W. (you)<span>Online now</span></button
+                ><button class="list-button">
+                  Nick Thackray
+                  <!----><span class="text-muted"
+                    >Seen 2 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Sukhi Chandi
+                  <!----><span class="text-muted"
+                    >Seen 2 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Ashleigh Carr
+                  <!----><span>Online now</span></button
+                ><button class="list-button">
+                  Android User
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Sukhi2 Chandi
+                  <!----><span class="text-muted">Seen 4 days ago</span></button
+                ><button class="list-button">
+                  Ashleigh Carr
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Ranveer Singh
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Mike Fuson
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Abe Lincoln
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Android Emulator
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Ipad User
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Durga Prasad
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Android 2
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Nick T.
+                  <!----><span class="text-muted"
+                    >Seen 2 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Saadiq de Beer
+                  <!----><span class="text-muted"
+                    >Seen 3 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Android User
+                  <!----><span class="text-muted"
+                    >Seen 2 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Rob Whitehead
+                  <!----><span class="text-muted"
+                    >Seen 2 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Surendra Singh
+                  <!----><span class="text-muted"
+                    >Seen 2 months ago</span
+                  ></button
+                ><button class="list-button">
+                  ash iphone
+                  <!----><span class="text-muted"
+                    >Seen 2 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Ash Android
+                  <!----><span class="text-muted"
+                    >Seen 2 months ago</span
+                  ></button
+                ><button class="list-button">
+                  Michał W
+                  <!----><span class="text-muted">Seen 3 days ago</span></button
+                ><button class="list-button">
+                  Firefox User
+                  <!----><span class="text-muted">Seen 3 days ago</span>
+                </button>
               </div>
-              <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+              <footer>
+                <button class="go-back list-button">
+                  <svg
+                    width="8"
+                    height="16"
+                    viewBox="0 0 8 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="display: inline"
+                  >
+                    <path
+                      d="M6.67262 15.9999C6.50185 16.0005 6.33312 15.9628 6.17883 15.8897C6.02454 15.8165 5.88861 15.7097 5.78103 15.5771L0.260033 8.72061C0.0919094 8.51613 0 8.25965 0 7.99496C0 7.73027 0.0919094 7.47379 0.260033 7.26932L5.97535 0.412821C6.16937 0.179452 6.44818 0.0326955 6.75043 0.00483554C7.05269 -0.0230244 7.35363 0.0702947 7.58707 0.264263C7.8205 0.458232 7.9673 0.736962 7.99516 1.03913C8.02303 1.34131 7.92969 1.64217 7.73566 1.87554L2.62617 8.00068L7.5642 14.1258C7.70398 14.2936 7.79277 14.4978 7.82007 14.7144C7.84736 14.931 7.81202 15.1509 7.71823 15.3481C7.62443 15.5452 7.47611 15.7114 7.29081 15.8269C7.1055 15.9424 6.89098 16.0025 6.67262 15.9999Z"
+                      fill="#6E6E6E"
+                    ></path>
+                  </svg>
+                  Back
+                </button>
+              </footer>
             </aside>
             <main style="background-color: green">
               <div class="card">
