@@ -114,6 +114,8 @@ nav {
   @extend %animation-slide-down;
   padding-top: $magic-number;
   padding-bottom: $magic-number;
+  position: relative;
+  z-index: 5;
   .sidebar-toggle svg {
     fill: $color-text-gray;
   }
