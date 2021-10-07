@@ -23,7 +23,7 @@
     grid-template:
       'card-img card-img'
       'card-body card-buttons'
-      / 1fr auto;
+      / auto auto;
     align-items: center;
     justify-content: space-between;
   }
