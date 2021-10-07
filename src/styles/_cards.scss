@@ -19,7 +19,7 @@
     'card-body'
     'card-buttons';
   @media (min-width: $breakpoints-tablet) {
-    min-width: $magic-number * 70;
+    min-width: $magic-number * 40;
     grid-template:
       'card-img card-img'
       'card-body card-buttons'
