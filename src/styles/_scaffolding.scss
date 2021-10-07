@@ -107,6 +107,7 @@ nav {
   @extend %grid;
   @extend %grid-column-flow;
   @extend %container-padding;
+  @extend %animation-slide-down;
   padding-top: $magic-number;
   padding-bottom: $magic-number;
   .sidebar-toggle svg {

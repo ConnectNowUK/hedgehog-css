@@ -22,7 +22,12 @@ $transition-cubic-bezier: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 %animation-slide-left {
-  animation: slide-left 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: slide-left 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  @extend %animation-base;
+}
+
+%animation-slide-down {
+  animation: slide-down 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   @extend %animation-base;
 }
 
@@ -85,6 +90,17 @@ $transition-cubic-bezier: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   0% {
     opacity: 0;
     transform: translateX(36px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-36px);
   }
   100% {
     opacity: 1;
