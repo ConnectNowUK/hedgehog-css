@@ -181,3 +181,52 @@
     transition: all 0.5s ease-in-out;
   }
 }
+
+// Copied from chat app
+
+.go-back {
+  padding: 16px;
+  display: flex;
+  box-shadow: none;
+  color: #6e6e6e;
+  svg {
+    margin-right: 8px;
+  }
+  &:hover {
+    color: #232323;
+  }
+  &:after {
+    display: none;
+  }
+}
+.share-button {
+  margin-right: 40px;
+}
+.sidebar,
+.sidebar > div {
+  max-height: 100vh;
+  height: 100vh;
+}
+@supports (-webkit-touch-callout: none) {
+  .sidebar,
+  .sidebar > div {
+    max-height: -webkit-fill-available;
+  }
+}
+.sidebar > div {
+  display: grid;
+  grid-auto-rows: 72px 1fr auto;
+}
+.sidebar header {
+  display: flex;
+  align-items: center;
+}
+.sidebar .scrollable {
+  overflow-y: scroll;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.no-icon::after {
+  display: none;
+}
