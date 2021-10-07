@@ -109,6 +109,9 @@ nav {
   @extend %container-padding;
   padding-top: $magic-number;
   padding-bottom: $magic-number;
+  .sidebar-toggle svg {
+    fill: $color-text-gray;
+  }
 }
 
 .logo-name-wrapper {

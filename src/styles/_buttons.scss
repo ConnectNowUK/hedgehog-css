@@ -12,6 +12,9 @@
   grid-gap: $magic-number;
   align-items: center;
   transition: $transition-cubic-bezier;
+  svg {
+    fill: $color-text-white;
+  }
   &[data-is-loading='true'] {
     padding: $magic-number $magic-number * 2;
     content: $icon-loader;
@@ -23,6 +26,9 @@
     background-color: $color-actions-primary-disabled;
     color: $color-text-gray;
     cursor: not-allowed;
+    svg {
+      fill: $color-text-gray;
+    }
     &:hover {
       @extend %animation-shake;
     }
@@ -53,6 +59,9 @@
   &.white {
     background-color: $color-actions-white-default;
     color: $color-text-black;
+    svg {
+      fill: $color-text-black;
+    }
     &:hover {
       background-color: $color-actions-white-hover;
     }

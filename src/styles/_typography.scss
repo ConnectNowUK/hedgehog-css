@@ -358,11 +358,17 @@ a.text-danger,
     content: $icon-warning-triangle;
     margin-right: $magic-number / 2;
   }
+  svg {
+    fill: $color-text-danger;
+  }
 }
 
 .text-positive,
 %text-positive {
   color: $color-text-success;
+  svg {
+    fill: $color-text-success;
+  }
 }
 
 .text-success,
