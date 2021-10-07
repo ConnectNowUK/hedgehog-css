@@ -88,8 +88,12 @@ a.button {
   padding-bottom: $magic-number;
   min-height: $magic-number * 7;
   width: 100%;
-  display: block;
+  display: flex;
+  align-items: unset;
+  flex-flow: column;
+  justify-content: center;
   text-align: left;
+  gap: 0;
   border-radius: 0;
   box-shadow: $effect-dropdown-shadow-0-offset-x
       $effect-dropdown-shadow-0-offset-y + px $effect-dropdown-shadow-0-radius

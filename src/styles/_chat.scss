@@ -184,11 +184,13 @@
 
 // Copied from chat app
 
-.go-back {
+.list-button.go-back {
   padding: $magic-number * 2;
-  display: flex;
   box-shadow: none;
   color: $color-text-gray;
+  flex-flow: initial;
+  align-items: center;
+  justify-content: end;
   svg {
     margin-right: $magic-number;
   }
