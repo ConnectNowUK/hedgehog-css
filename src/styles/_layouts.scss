@@ -135,6 +135,12 @@
     padding-top: $magic-number * 3;
     padding-bottom: $magic-number * 3;
   }
+  &.inverted {
+    .sidebar {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+  }
 }
 
 .layout-fullscreen {
