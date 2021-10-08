@@ -82,10 +82,6 @@ audio::-webkit-media-controls-enclosure {
   justify-content: space-between;
 }
 
-.grid-column-flow.equal-height {
-  align-items: stretch;
-}
-
 .gap-8,
 %gap-8 {
   gap: $magic-number;

@@ -16,3 +16,8 @@
 %d-none {
   display: none;
 }
+
+.grid-column-flow.equal-height,
+.equal-width:not(.grid-column-flow) {
+  align-items: stretch;
+}
