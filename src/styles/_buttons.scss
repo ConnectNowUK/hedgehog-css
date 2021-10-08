@@ -169,9 +169,3 @@ button.list-button,
 %list-button {
   @include list-button();
 }
-
-/* List buttons in boxes need a border radius on the bottom. Didn't want to apply to all. */
-.box .button.list-button:last-child {
-  border-bottom-left-radius: $magic-number;
-  border-bottom-right-radius: $magic-number;
-}

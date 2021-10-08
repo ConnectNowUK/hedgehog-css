@@ -168,6 +168,7 @@
   @extend %container-padding;
   padding-top: $magic-number * 3;
   @extend %animation-slide-left;
+  overflow-x: hidden;
   &.grid {
     align-self: flex-start;
     grid-auto-rows: min-content;

@@ -116,6 +116,7 @@ nav {
   padding-bottom: $magic-number;
   position: relative;
   z-index: 5;
+  min-height: $magic-number * 9;
   .sidebar-toggle svg {
     fill: $color-text-gray;
   }
