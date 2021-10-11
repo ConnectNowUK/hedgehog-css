@@ -98,11 +98,6 @@
     }
   }
 }
-@media (min-width: $breakpoints-tablet) {
-  .dropdown {
-    min-width: $magic-number * 30;
-  }
-}
 .dropdown-trigger {
   overflow: visible;
   position: relative;
@@ -113,3 +108,38 @@
     display: grid;
   }
 }
+
+.dropdown-trigger.queries-dropdown {
+  /*
+    Queries dropdown needs to be wide to allow cards on desktop
+    This is hard to do with its relative positioning without JS to detect VW width and relative offset
+    So let's make it the full viewport width
+  */
+  position: unset;
+  .dropdown {
+    width: calc(100% - 80px);
+    left: 16px;
+    top: 48px;
+    // width: calc(100% - $magic-number * 10);
+    // left: $magic-number * 2;
+    // top: $magic-number * 6;
+  }
+}
+
+@media (min-width: $breakpoints-tablet) {
+  .dropdown-trigger.queries-dropdown {
+    position: unset;
+    .dropdown {
+      width: 60vw;
+      left: auto;
+      right: 48px;
+      max-width: 1024px;
+      // right: $magic-number * 6;
+      // max-width: $magic-number * 128;
+    }
+  }
+  .dropdown {
+    min-width: $magic-number * 30;
+  }
+}
+
