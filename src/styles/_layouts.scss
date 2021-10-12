@@ -186,6 +186,20 @@
     padding-bottom: 1px;
     max-height: 100%;
   }
+  
+  /* 
+    Chat sidebar > attachments
+    This is a .list-item, but we only want to apply it in this specific case.
+      Fortunately we seem to have an inner .message-attachment div we can use.
+
+    Required because of long titles that don't break, forcing the button to be one character wide
+    1fr auto ensures the grid gives the button adequate space, with the remaining to the title. This also makes them all the same width.
+    Then we need to break-all the title as long titles still break the layout
+  */
+  .message-attachment .grid {
+    grid-template-columns: 1fr auto;
+    word-break: break-all; 
+  }
 }
 
 @media (min-width: $breakpoints-tablet) {
