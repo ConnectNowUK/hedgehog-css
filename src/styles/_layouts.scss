@@ -203,6 +203,7 @@
       grid-area: sidebar;
       max-height: calc(100vh - #{$magic-number * 9});
       height: calc(100vh - #{$magic-number * 9});
+      height: -webkit-fill-available;
       + main {
         padding-left: $magic-number * 3;
       }
