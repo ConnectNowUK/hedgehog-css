@@ -43,6 +43,10 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: npm ci
 
+      - name: NPM build
+        if: steps.check.outputs.changed == 'true'
+        run: npm run build
+
       # We now store the changes in the repository
       - name: Persist changes in repository
         if: steps.check.outputs.changed == 'true'
