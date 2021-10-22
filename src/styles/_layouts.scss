@@ -186,7 +186,7 @@
     padding-bottom: 1px;
     max-height: 100%;
   }
-  
+
   /* 
     Chat sidebar > attachments
     This is a .list-item, but we only want to apply it in this specific case.
@@ -198,7 +198,7 @@
   */
   .message-attachment .grid {
     grid-template-columns: 1fr auto;
-    word-break: break-all; 
+    word-break: break-all;
   }
 }
 
