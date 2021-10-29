@@ -41,6 +41,17 @@ $transition-cubic-bezier: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   @extend %animation-base;
 }
 
+%animation-alert-pulse {
+  /* Single use */
+  
+  animation: pulse 2s 3;
+  animation-fill-mode: forwards;
+  
+  /* Loop for demo */
+  // animation: pulse 2s infinite;
+  @extend %animation-base;
+}
+
 @keyframes shake {
   10%,
   90% {
@@ -135,5 +146,22 @@ $transition-cubic-bezier: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   to {
     backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 $color-borders-error-animate-start;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px $color-borders-error-animate-end;
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 $color-borders-error-animate-end;
   }
 }

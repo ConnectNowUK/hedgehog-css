@@ -158,3 +158,18 @@ nav {
   justify-content: center;
   object-fit: scale-down;
 }
+
+.alert-dot {
+  background: $color-borders-error;
+  border-radius: $magic-number;
+  height: $magic-number * 2;
+  width: $magic-number * 2;
+
+  box-shadow: 0 0 0 0 $color-borders-error;
+  transform: scale(1);
+  display: none;
+&.animated {
+    display: block;
+    @extend %animation-alert-pulse;
+  }
+}
