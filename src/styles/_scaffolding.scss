@@ -87,6 +87,11 @@ audio::-webkit-media-controls-enclosure {
   gap: $magic-number;
 }
 
+.gap-16,
+%gap-16 {
+  gap: $magic-number * 2;
+}
+
 fieldset,
 form,
 section,
