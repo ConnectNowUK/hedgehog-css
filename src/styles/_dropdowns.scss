@@ -118,11 +118,8 @@
   position: unset;
   .dropdown {
     width: calc(100% - 80px);
-    left: 16px;
-    top: 48px;
-    // width: calc(100% - $magic-number * 10);
-    // left: $magic-number * 2;
-    // top: $magic-number * 6;
+    right: $magic-number * 6;
+    top: $magic-number * 6;
   }
 }
 
@@ -131,11 +128,7 @@
     position: unset;
     .dropdown {
       width: 60vw;
-      left: auto;
-      right: 48px;
       max-width: 1024px;
-      // right: $magic-number * 6;
-      // max-width: $magic-number * 128;
     }
   }
   .dropdown {
