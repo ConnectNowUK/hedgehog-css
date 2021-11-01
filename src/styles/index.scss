@@ -15,6 +15,34 @@ $magic-number: 8px;
 
 :root {
   // Vue multiselect
+  --ms-bg: #{$color-background-white};
+  --ms-bg-disabled: #{$color-actions-primary-disabled};
+  --ms-border-color: #{$color-borders-gray};
+  --ms-ring-width: 2px;
+  --ms-ring-color: #{$color-actions-primary-default};
+  --ms-placeholder-color: #{$color-text-gray};
+  
+  --ms-spinner-color: #{$color-actions-primary-default};
+  --ms-caret-color: #{$color-text-gray};
+  --ms-clear-color: #{$color-text-gray};
+  --ms-clear-color-hover: #{$color-text-black};
+  
   --ms-tag-bg: #{$color-actions-primary-default};
+  --ms-tag-bg-disabled: #{$color-actions-primary-disabled};
   --ms-tag-color: #{$color-text-white};
+  --ms-tag-color-disabled: #{$color-text-gray};
+
+  --ms-dropdown-border-color: #{$color-borders-gray};
+  
+  --ms-option-bg-pointed: #{$color-actions-primary-hover};
+  --ms-option-bg-selected: #{$color-actions-primary-pressed};
+  --ms-option-bg-disabled: #{$color-actions-primary-disabled};
+  --ms-option-bg-selected-pointed: #{$color-actions-primary-hover};
+  --ms-option-bg-selected-disabled: #{$color-actions-primary-pressed};
+  --ms-option-color-pointed: #{$color-text-white};
+  --ms-option-color-selected: #{$color-text-white};
+  --ms-option-color-disabled: #{$color-text-gray};
+  --ms-option-color-selected-pointed: #{$color-text-white};
+  --ms-option-color-selected-disabled: #{$color-text-white};
+
 }
