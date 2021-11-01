@@ -271,8 +271,8 @@
         padding-left: $magic-number * 3;
       }
       &.collapsible {
-        max-height: calc(100vh - #{$magic-number * 9});
-        height: calc(100vh - #{$magic-number * 9});
+        max-height: 100vh;
+        height: 100vh;
         grid-auto-flow: row;
         overflow-x: unset;
       }
