@@ -379,3 +379,20 @@ a.text-danger,
     margin-right: $magic-number / 2;
   }
 }
+
+// I have no idea how to get Figma to manage this correctly, the exisitng mixins are not suitable
+// I'm fixing it like this for now because this is better than literally nothing.
+code,
+.text-monospace-style-6,
+.text-monospace-bold-style-6 {
+  font-family: $font-monospace-style-6-font-family;
+  font-size: $font-monospace-style-6-font-size;
+  font-weight: $font-monospace-style-6-font-weight;
+  line-height: $font-monospace-style-6-line-height;
+  text-decoration: $font-monospace-style-6-text-decoration;
+}
+.text-monospace-bold-style-6,
+code b,
+code strong {
+  font-weight: $font-monospace-bold-style-6-font-weight;
+}
