@@ -44,8 +44,7 @@ $transition-cubic-bezier: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 %animation-alert-pulse {
   /* Single use */
   
-  animation: pulse 2s 3;
-  animation-fill-mode: forwards;
+  animation: pulse 2s forwards;
   
   /* Loop for demo */
   // animation: pulse 2s infinite;
