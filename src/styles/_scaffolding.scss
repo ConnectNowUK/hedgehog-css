@@ -168,7 +168,7 @@ nav {
   box-shadow: 0 0 0 0 $color-borders-error;
   transform: scale(1);
   display: none;
-&.animated {
+  &.animated {
     display: block;
     @extend %animation-alert-pulse;
   }
