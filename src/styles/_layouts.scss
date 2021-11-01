@@ -178,7 +178,7 @@
     display: flex;
     align-items: center;
   }
-  @media screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     grid-auto-flow: column;
     grid-template-columns: auto auto;
     grid-template-rows: 1fr;
@@ -195,7 +195,7 @@
   }
   &.variant-auth {
     grid-template-rows: 25vh 1fr;
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       grid-template-columns: 3fr minmax(500px, 1fr);
       grid-template-rows: 1fr;
       main {
