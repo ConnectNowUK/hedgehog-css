@@ -12,3 +12,9 @@ $magic-number: 8px;
 @import 'cards';
 @import 'dropdowns';
 @import 'layouts';
+
+:root {
+    // Vue multiselect
+    --ms-tag-bg: #{$color-actions-primary-default};
+    --ms-tag-color: #{$color-text-white};
+}
