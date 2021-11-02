@@ -21,3 +21,8 @@
 .equal-width:not(.grid-column-flow) {
   align-items: stretch;
 }
+
+.text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

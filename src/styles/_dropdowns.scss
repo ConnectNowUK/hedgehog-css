@@ -3,6 +3,7 @@
   display: none;
   grid-auto-flow: row;
   border-radius: $magic-number;
+  box-sizing: border-box;
   background: $color-background-white;
   box-shadow: $effect-dropdown-shadow-0-offset-x
       $effect-dropdown-shadow-0-offset-y + px $effect-dropdown-shadow-0-radius
@@ -117,9 +118,12 @@
   */
   position: unset;
   .dropdown {
-    width: calc(100% - 80px);
-    right: $magic-number * 6;
+    max-width: calc(100vw - (#{$magic-number} * 4));
+    right: $magic-number * 2;
     top: $magic-number * 6;
+    .text-overflow {
+      max-width: 50vw;
+    }
   }
 }
 
@@ -127,8 +131,11 @@
   .dropdown-trigger.queries-dropdown {
     position: unset;
     .dropdown {
-      width: 60vw;
-      max-width: 1024px;
+      right: $magic-number * 6;
+      max-width: calc(100vw - (#{$magic-number} * 12));
+      .text-overflow {
+        max-width: 25vw;
+      }
     }
   }
   .dropdown {
