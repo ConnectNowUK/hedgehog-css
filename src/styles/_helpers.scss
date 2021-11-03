@@ -21,3 +21,16 @@
 .equal-width:not(.grid-column-flow) {
   align-items: stretch;
 }
+
+svg.muted,
+img.muted {
+  opacity: 0.5;
+  mix-blend-mode: luminosity;
+}
+
+.centered {
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ justify-content: center; 
+}

@@ -18,6 +18,9 @@
     'card-img'
     'card-body'
     'card-buttons';
+    &.muted {
+      background-color: $color-actions-primary-disabled;
+    }
   @media (min-width: $breakpoints-tablet) {
     min-width: $magic-number * 40;
     grid-template:
