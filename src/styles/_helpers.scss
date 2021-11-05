@@ -22,6 +22,10 @@
   align-items: stretch;
 }
 
+.grid-column-flow.auto-width {
+  justify-content: stretch;
+}
+
 svg.muted,
 img.muted {
   opacity: 0.5;
@@ -29,8 +33,8 @@ img.muted {
 }
 
 .centered {
- display: flex;
- flex-flow: column;
- align-items: center;
- justify-content: center; 
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }

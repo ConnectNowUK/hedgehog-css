@@ -18,9 +18,9 @@
     'card-img'
     'card-body'
     'card-buttons';
-    &.muted {
-      background-color: $color-actions-primary-disabled;
-    }
+  &.muted {
+    background-color: $color-actions-primary-disabled;
+  }
   @media (min-width: $breakpoints-tablet) {
     min-width: $magic-number * 40;
     grid-template:
@@ -114,9 +114,7 @@
     padding-right: $magic-number * 2;
   }
   .padded-form {
-    padding-left: $magic-number * 2;
-    padding-right: $magic-number * 2;
-    padding-bottom: $magic-number * 2;
+    padding: $magic-number * 2;
   }
   // Scoping this to .box for now, needs thinking about but this is better than nothing, which is what we have now.
   code {
