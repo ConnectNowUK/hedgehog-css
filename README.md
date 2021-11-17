@@ -21,6 +21,8 @@ Clone this repo and npm install.
 npm i
 ```
 
+Note that you can also use the dev-container included in the project.
+
 ## Usage
 
 ### Development server
