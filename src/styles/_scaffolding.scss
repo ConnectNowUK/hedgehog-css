@@ -45,8 +45,8 @@ main {
   height: 100vh;
 }
 
-section {
-  // background-color: $color-background-white;
+section:not(:last-child) {
+  margin-bottom: $magic-number * 3;
 }
 
 img,
