@@ -169,7 +169,7 @@
 
   main,
   .backing {
-    padding: $magic-number * 6;
+    padding: $magic-number * 6 $magic-number * 2;
   }
   main {
     align-items: flex-start;
@@ -327,6 +327,13 @@
       top: 0;
       left: 0;
       right: 0;
+    }
+  }
+
+  .layout-half {
+    main,
+    .backing {
+      padding: $magic-number * 3;
     }
   }
 }
