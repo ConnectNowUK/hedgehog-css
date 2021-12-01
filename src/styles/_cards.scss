@@ -115,6 +115,9 @@
   }
   .padded-form {
     padding: $magic-number * 2;
+    &:only-child {
+      padding-top: 0;
+    }
   }
   // Scoping this to .box for now, needs thinking about but this is better than nothing, which is what we have now.
   code {
