@@ -45,8 +45,8 @@ code {
 }
 
 code {
-  display: block;
-  padding: $magic-number * 2;
+  padding: $magic-number;
+  white-space: pre;
 }
 
 .rounded,
@@ -59,4 +59,12 @@ code {
   &:only-child {
     padding-top: 0;
   }
+}
+
+.justify-start {
+  justify-self: flex-start;
+}
+
+.justify-end {
+  justify-self: flex-end;
 }
