@@ -38,3 +38,25 @@ img.muted {
   align-items: center;
   justify-content: center;
 }
+
+.background-off-white,
+code {
+  background: $color-background-off-white;
+}
+
+code {
+  display: block;
+  padding: $magic-number * 2;
+}
+
+.rounded,
+code {
+  border-radius: $magic-number;
+}
+
+.padded-content {
+  padding: $magic-number * 2;
+  &:only-child {
+    padding-top: 0;
+  }
+}

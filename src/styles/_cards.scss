@@ -91,39 +91,3 @@
     @include button();
   }
 }
-
-.box {
-  background: $color-background-white;
-
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05),
-    0px 0px 1px rgba(66, 71, 76, 0.45);
-  border-radius: $magic-number;
-  /* padding: 24px 16px; */
-
-  align-items: flex-start;
-  width: 100%;
-
-  .list-button:last-child,
-  .list-item:last-child {
-    border-bottom-left-radius: $magic-number;
-    border-bottom-right-radius: $magic-number;
-  }
-  .box-heading {
-    padding-top: $magic-number * 3;
-    padding-left: $magic-number * 2;
-    padding-right: $magic-number * 2;
-  }
-  .padded-form {
-    padding: $magic-number * 2;
-    &:only-child {
-      padding-top: 0;
-    }
-  }
-  // Scoping this to .box for now, needs thinking about but this is better than nothing, which is what we have now.
-  code {
-    display: block;
-    padding: $magic-number * 2;
-    background: $color-background-off-white;
-    border-radius: $magic-number;
-  }
-}
