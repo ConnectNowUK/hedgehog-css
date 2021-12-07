@@ -1,6 +1,6 @@
 {
   "name": "@connectnow/hedgehog",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "Hedgehog is ConnectNows CSS and SCSS",
   "main": "index.js",
   "author": "ConnectNow",

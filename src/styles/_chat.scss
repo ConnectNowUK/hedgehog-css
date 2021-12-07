@@ -201,3 +201,15 @@
     display: none;
   }
 }
+
+.welcome-message {
+  display: grid;
+  gap: $magic-number * 2;
+  grid-auto-flow: row;
+  justify-content: center;
+  margin: $magic-number * 6 0;
+  color: $color-text-gray;
+  svg {
+    justify-self: center;
+  }
+}
