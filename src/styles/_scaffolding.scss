@@ -139,6 +139,13 @@ nav {
   }
 }
 
+.top-nav-wrapper {
+  grid-area: nav;
+  display: grid;
+  grid-auto-flow: row;
+  width: 100%;
+}
+
 .navbar-links {
   @extend %grid;
   @extend %grid-column-flow;

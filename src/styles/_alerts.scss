@@ -1,0 +1,29 @@
+.alert {
+  position: relative;
+  width: 100%;
+  background-color: $color-actions-primary-default;
+  color: $color-text-white;
+  padding-top: $magic-number;
+  padding-bottom: $magic-number;
+  padding-left: $magic-number;
+  padding-right: $magic-number;
+  text-align: left;
+  box-shadow: $effect-dropdown-shadow-0-offset-x
+      $effect-dropdown-shadow-0-offset-y + px $effect-dropdown-shadow-0-radius
+      $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
+    $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
+      $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
+      $effect-dropdown-shadow-1-color;
+  animation: slide-down 0.2s ease-in-out both;
+  height: fit-content;
+  height: intrinsic;
+
+  @extend %text-style-7;
+  a,
+  a:hover,
+  a:visited,
+  a:focus {
+    color: $color-text-white;
+    @extend %text-links-style-7;
+  }
+}
