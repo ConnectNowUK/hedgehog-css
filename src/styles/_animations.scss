@@ -51,6 +51,10 @@ $transition-cubic-bezier: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   @extend %animation-base;
 }
 
+%animation-spin {
+  animation: spin 1s infinite linear;
+}
+
 @keyframes shake {
   10%,
   90% {
@@ -162,5 +166,14 @@ $transition-cubic-bezier: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   100% {
     transform: scale(0.75);
     box-shadow: 0 0 0 0 rgba($color-borders-error, 0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

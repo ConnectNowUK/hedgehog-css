@@ -68,3 +68,7 @@ code {
 .justify-end {
   justify-self: flex-end;
 }
+
+.spin {
+  @extend %animation-spin;
+}

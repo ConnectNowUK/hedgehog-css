@@ -17,6 +17,9 @@ $magic-number: 8px;
 @import 'box';
 
 :root {
+  // Expose colours for SVGs
+  --color-primary: #{$color-actions-primary-default};
+
   // Vue multiselect
   --ms-bg: #{$color-background-white};
   --ms-bg-disabled: #{$color-actions-primary-disabled};
