@@ -28,7 +28,7 @@ Note that you can also use the dev-container included in the project.
 ### Development server
 
 ```bash
-npm watch
+npm run watch
 ```
 
 You can view the development server at `localhost:8080`.

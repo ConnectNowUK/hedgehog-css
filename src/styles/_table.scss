@@ -1,0 +1,33 @@
+table.table {
+  box-shadow: $effect-dropdown-shadow-0-offset-x
+      $effect-dropdown-shadow-0-offset-y + px $effect-dropdown-shadow-0-radius
+      $effect-dropdown-shadow-0-spread $effect-dropdown-shadow-0-color,
+    $effect-dropdown-shadow-1-offset-x $effect-dropdown-shadow-1-offset-y
+      $effect-dropdown-shadow-1-radius $effect-dropdown-shadow-1-spread
+      $effect-dropdown-shadow-1-color;
+  border-radius: $magic-number;
+  border-collapse: collapse;
+  background-color: $color-background-white;
+  overflow: hidden;
+
+  th,
+  td {
+    padding: $magic-number * 2;
+    text-align: left;
+  }
+
+  th {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  &.banded {
+    tbody tr:nth-child(odd) {
+      background: $color-background-off-white;
+    }
+  }
+  &.bordered {
+    tbody tr:not(:last-child) {
+        border-bottom: 1px solid $color-background-off-white;
+      }
+  }
+}
