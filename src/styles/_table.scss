@@ -13,11 +13,11 @@ table.table {
   th,
   td {
     padding: $magic-number * 2;
-    text-align: left;
   }
 
   th {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: left;
   }
 
   &.banded {
@@ -27,7 +27,7 @@ table.table {
   }
   &.bordered {
     tbody tr:not(:last-child) {
-        border-bottom: 1px solid $color-background-off-white;
-      }
+      border-bottom: 1px solid $color-background-off-white;
+    }
   }
 }

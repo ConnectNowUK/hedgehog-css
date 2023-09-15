@@ -398,3 +398,16 @@ code b,
 code strong {
   font-weight: $font-monospace-bold-style-6-font-weight;
 }
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
