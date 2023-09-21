@@ -15,6 +15,7 @@
   border-radius: $magic-number;
   max-width: 80vw;
   min-width: 80vw;
+  overflow-y: auto;
   @media (min-width: $breakpoints-tablet) {
     min-width: 500px;
     max-width: 1024px;
