@@ -363,6 +363,16 @@ a.text-danger,
   }
 }
 
+.text-warning,
+button.text-warning,
+a.text-warning,
+%text-warning {
+  color: $color-text-warning;
+  svg {
+    fill: $color-text-warning;
+  }
+}
+
 .text-positive,
 %text-positive {
   color: $color-text-success;
