@@ -13,19 +13,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14' # or the version you use
+          node-version: '16' # or the version you use
           registry-url: 'https://registry.npmjs.org'
-          
+
       - name: Install Dependencies
         run: npm i
-        
+
       - name: Build
         run: npm run build # if you have a build script
-        
+
       - name: Publish
         run: npm publish
         env:
