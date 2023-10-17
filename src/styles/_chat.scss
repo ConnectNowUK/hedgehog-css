@@ -99,7 +99,6 @@
     grid-auto-flow: column;
     align-items: end;
     grid-gap: $magic-number;
-    grid-template-columns: auto auto;
     // z-index: -1; // Causes issues with element click-ability
     .message {
       padding-top: $magic-number;
@@ -119,6 +118,9 @@
     .message-info {
       padding-left: $magic-number * 6;
     }
+    > .message-group {
+      grid-template-columns: auto 1fr;
+    }
   }
   &.outbound {
     float: right;
@@ -130,6 +132,9 @@
       .text-muted {
         color: $color-text-white;
       }
+    }
+    > .message-group {
+      grid-template-columns: 1fr;
     }
   }
 }
