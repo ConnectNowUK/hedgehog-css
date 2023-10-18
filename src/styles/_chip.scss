@@ -1,0 +1,18 @@
+.chip-container {
+  display: flex;
+  flex-flow: row;
+  gap: $magic-number;
+  align-items: center;
+  max-width: 180px;
+  padding: $magic-number / 2 $magic-number * 2;
+  border-radius: $magic-number * 10;
+  background-color: $color-background-off-white;
+  color: $color-text-black;
+  text-wrap: nowrap;
+
+  p {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
