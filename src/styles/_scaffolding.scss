@@ -69,6 +69,25 @@ audio::-webkit-media-controls-enclosure {
   border-radius: $magic-number;
 }
 
+.horizontal-masked-container {
+  padding-right: $magic-number * 4;
+  display: flex;
+  flex-flow: row;
+  gap: $magic-number * 2;
+  max-width: 100%;
+  overflow-x: auto;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) calc(100% - 80px),
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) calc(100% - 80px),
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
 .grid,
 %grid {
   display: grid;
@@ -190,26 +209,6 @@ nav {
   margin: 0 auto;
 }
 
-.horizontal-masked-container {
-  padding-right: $magic-number * 4;
-  display: flex;
-  flex-flow: row;
-  gap: $magic-number * 2;
-  max-width: 100%;
-  overflow-x: auto;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1) calc(100% - 80px),
-    rgba(0, 0, 0, 0) 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1) calc(100% - 80px),
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-
-
 /* Scrollbar */
 .thin-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
@@ -227,12 +226,12 @@ nav {
 }
 
 .thin-scrollbar::-webkit-scrollbar-thumb {
-  --background-color: rgba(0, 0, 0, 0.33);
+  --background-color: rgba(0, 0, 0, 0.2);
   width: 6px;
   background: var(--background-color);
   border-radius: 20px;
 }
 
 .thin-scrollbar::-webkit-scrollbar-thumb:hover {
-  --background-color: rgba(0, 0, 0, 0.66);
+  --background-color: rgba(0, 0, 0, 0.5);
 }
