@@ -26,4 +26,8 @@
     color: $color-text-white;
     @extend %text-links-style-7;
   }
+
+  &.danger {
+    background-color: $color-borders-error;
+  }
 }
