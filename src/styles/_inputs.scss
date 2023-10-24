@@ -1,4 +1,5 @@
 label {
+  @extend %text-bold-style-7;
   margin-bottom: $magic-number / 2;
   display: inline-grid;
   grid-gap: $magic-number;
