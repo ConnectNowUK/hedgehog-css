@@ -10,6 +10,12 @@ table.table {
   background-color: $color-background-white;
   overflow: hidden;
 
+  caption {
+    margin-bottom: $magic-number;
+    text-align: left;
+    @extend %text-bold-style-7;
+  }
+
   th,
   td {
     padding: $magic-number * 2;
@@ -28,6 +34,9 @@ table.table {
   &.bordered {
     tbody tr:not(:last-child) {
       border-bottom: 1px solid $color-background-off-white;
+    }
+    tfoot tr {
+      border-top: 1px solid $color-background-off-white;
     }
   }
 }

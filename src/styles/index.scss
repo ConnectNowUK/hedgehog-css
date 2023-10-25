@@ -21,6 +21,8 @@ $magic-number: 8px;
 :root {
   // Expose colours for SVGs
   --color-primary: #{$color-actions-primary-default};
+  // Expose magic number for inline spacing
+  --magic-number: #{$magic-number};
 
   // Vue multiselect
   --ms-bg: #{$color-background-white};

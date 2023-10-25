@@ -1,6 +1,6 @@
 {
   "name": "@cnukorg/hedgehog",
-  "version": "0.1.42",
+  "version": "0.1.43",
   "description": "Hedgehog is ConnectNows CSS and SCSS",
   "main": "index.js",
   "author": "ConnectNow",
