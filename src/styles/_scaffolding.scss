@@ -251,3 +251,25 @@ hr.secondary {
   background: $color-borders-gray;
   opacity: 0.33;
 }
+
+/* Viewport based visibility */
+@media (max-width: $breakpoints-desktop) {
+  .hidden-tablet-down {
+    display: none;
+  }
+}
+@media (max-width: $breakpoints-tv) {
+  .hidden-desktop-down {
+    display: none;
+  }
+}
+@media (min-width: $breakpoints-tablet) {
+  .hidden-tablet-up {
+    display: none;
+  }
+}
+@media (min-width: $breakpoints-desktop) {
+  .hidden-desktop-up {
+    display: none;
+  }
+}
