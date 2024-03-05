@@ -74,6 +74,9 @@ code {
 }
 
 
+.border-muted {
+  border: 1px solid $color-text-gray;
+}
 .border-info {
   border: 1px solid $color-actions-primary-default;
 }
