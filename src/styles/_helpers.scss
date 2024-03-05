@@ -72,3 +72,17 @@ code {
 .spin {
   @extend %animation-spin;
 }
+
+
+.border-info {
+  border: 1px solid $color-actions-primary-default;
+}
+.border-success {
+  border: 1px solid $color-borders-success;
+}
+.border-warning {
+  border: 1px solid $color-text-warning;
+}
+.border-danger {
+  border: 1px solid $color-borders-error;
+}
