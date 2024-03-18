@@ -65,7 +65,7 @@
       .button {
         @include list-button;
       }
-      :last-child {
+      :last-child button {
         border-bottom-right-radius: $magic-number;
         border-bottom-left-radius: $magic-number;
       }
@@ -74,10 +74,6 @@
       grid-auto-flow: column;
       width: max-content;
       gap: $magic-number;
-      > button,
-      .button {
-        @include button();
-      }
     }
     &:empty {
       display: none;
